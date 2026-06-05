@@ -155,3 +155,19 @@
 
     .img-ph{ font-size:3.333vw; }
 }
+
+
+/* ===== 바로예약 (GNB 맨 오른쪽 알약) — 전 페이지 통일 ===== */
+.header-wrap > .inner{position:relative;}
+.header-wrap .util{display:flex;position:absolute;right:4.167vw;top:1.563vw;padding:0;height:3.125vw;margin-top:0;}
+.header-wrap .util::before{display:none;}
+.header-wrap .util .btn-login{display:none;}
+.header-wrap .util .btn-nav{display:none;}
+.btn-booking{display:flex;align-items:center;justify-content:center;height:3.125vw;padding:0 1.667vw;border-radius:.417vw;background:var(--color-secondary,#2BD9FF);color:#0F0F0F;font-size:.938vw;font-weight:700;white-space:nowrap;transition:.2s;text-decoration:none;}
+.btn-booking:hover{background:#fff;}
+@media (max-aspect-ratio:10/9){
+  .header-wrap .util{position:fixed;right:4.444vw;top:5.556vw;height:11.667vw;padding:0 4.444vw;margin-top:0;column-gap:4.444vw;}
+  .header-wrap .util::before{display:block;}
+  .header-wrap .util .btn-nav{display:block;}
+  .btn-booking{height:8vw;font-size:3.6vw;padding:0 3.5vw;}
+}

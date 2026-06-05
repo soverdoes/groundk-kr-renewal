@@ -58,19 +58,36 @@ a{color:inherit;text-decoration:none;}
 .btn-fill:hover span{color:#fff;}
 
 /* =========================================================================
-   GNB (상단 고정 바) — English nav, Frame 1 기준
+   GNB — 운영 헤더(서브페이지와 통일) · 가운데 떠 있는 다크 알약 + 바로예약(우측)
    ========================================================================= */
-.gnb{
-  position:absolute;top:0;left:0;width:100%;z-index:50;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:1.5625vw var(--pad);
-}
-.gnb .logo{font-size:1.25vw;font-weight:800;letter-spacing:.02em;color:#fff;}
-.gnb nav ul{display:flex;gap:2.0833vw;list-style:none;}
-.gnb nav a{font-size:0.9375vw;font-weight:500;color:#fff;opacity:.92;}
-.gnb nav a:hover{opacity:1;}
-.gnb .gnb-r{display:flex;align-items:center;gap:1.0417vw;}
-.gnb .gnb-r .ico{width:1.25vw;height:1.25vw;border:1px solid rgba(255,255,255,.6);border-radius:50%;opacity:.9;}
+header{position:fixed;top:0;left:0;width:100%;z-index:100;transition:all .3s ease-out;}
+.header-wrap > .inner{display:flex;justify-content:center;column-gap:2.083vw;position:relative;width:100%;max-width:none;margin:0;}
+.header-wrap .logo-m{display:none;}
+.header-wrap .gnb{display:flex;align-items:center;padding:0 4.167vw;column-gap:3.125vw;border-radius:.417vw;position:relative;height:3.125vw;margin-top:1.563vw;}
+.header-wrap .gnb::before{content:"";width:100%;height:100%;position:absolute;background-color:rgba(0,0,0,.7);backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px);border-radius:.417vw;top:0;left:0;}
+.header-wrap .gnb .logo{position:relative;}
+.header-wrap .gnb .logo a{display:flex;}
+.header-wrap .gnb .logo a img{width:3.958vw;}
+.header-wrap .gnb .logo .btn-close{display:none;background:none;border:0;cursor:pointer;padding:0;}
+.header-wrap .gnb nav{display:flex;height:100%;position:relative;}
+.header-wrap .gnb nav > ul{display:flex;align-items:center;column-gap:3.125vw;list-style:none;}
+.header-wrap .gnb nav > ul > li{position:relative;height:100%;}
+.header-wrap .gnb nav > ul > li > a{font-size:.938vw;font-weight:500;color:#fff;height:100%;display:flex;align-items:center;padding:0 2px;transition:all .3s ease-out;text-align:center;position:relative;white-space:nowrap;}
+.header-wrap .gnb nav > ul > li > a::before{content:"";display:block;position:absolute;bottom:-.156vw;left:0;width:100%;height:.156vw;transition:all .3s ease-out;background-color:#fff;opacity:0;}
+.header-wrap .gnb nav > ul > li:hover > a{text-shadow:0 0 1px #fff;}
+.header-wrap .gnb nav > ul > li:hover > a::before{bottom:0;opacity:1;}
+.header-wrap .gnb nav > ul > li:hover .nav-sub{visibility:visible;opacity:1;transform:translateY(0);}
+.header-wrap .gnb nav .nav-sub{position:absolute;top:3.333vw;left:0;padding:1.458vw 1.042vw;background-color:rgba(0,0,0,.7);backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px);border-radius:.417vw;width:max-content;visibility:hidden;opacity:0;transition:all .3s ease-out;transform:translateY(.208vw);}
+.header-wrap .gnb nav .nav-sub > ul{display:flex;flex-direction:column;row-gap:.833vw;list-style:none;}
+.header-wrap .gnb nav .nav-sub > ul > li > a{font-size:.833vw;font-weight:500;color:#fff;transition:all .3s ease-out;display:flex;align-items:center;column-gap:.208vw;width:fit-content;}
+.header-wrap .gnb nav .nav-sub > ul > li > a:hover{color:#2BD9FF;text-shadow:0 0 1px #2BD9FF;}
+.header-wrap .gnb nav .nav-sub > ul > li > a b{font-weight:400;}
+/* util + 바로예약 (맨 오른쪽 알약) */
+.header-wrap .util{flex-shrink:0;display:flex;align-items:center;column-gap:1.042vw;position:absolute;right:4.167vw;top:1.563vw;height:3.125vw;}
+.header-wrap .util .btn-login{display:none;}
+.header-wrap .util .btn-nav{display:none;background:none;border:0;cursor:pointer;padding:0;}
+.btn-booking{display:flex;align-items:center;justify-content:center;height:3.125vw;padding:0 1.667vw;border-radius:.417vw;background:#2BD9FF;color:#0F0F0F;font-size:.938vw;font-weight:700;white-space:nowrap;transition:.2s;}
+.btn-booking:hover{background:#fff;}
 
 /* =========================================================================
    S1 — HERO
@@ -248,9 +265,28 @@ a{color:inherit;text-decoration:none;}
   .h-sec{font-size:6.1vw;}
   .lead,.s-hero p,.altrow .txt p,.s-mission .rightcol p,.s-svc .card p,
   .s-global .head p,.s-case .card p,.s-promise .card p,.s-pain .card p{font-size:3.9vw;line-height:1.6;}
-  .gnb nav,.gnb .gnb-r{display:none;}
-  .gnb{padding:4vw var(--pad);}
-  .gnb .logo{font-size:5vw;}
+  /* GNB 모바일 (운영 헤더 — 풀스크린 슬라이드인) */
+  header{position:absolute;}
+  .header-wrap > .inner{justify-content:flex-end;}
+  .header-wrap .gnb{position:fixed;width:100%;height:100vh;top:0;right:0;margin-top:0;z-index:1;padding:0 6.667vw;flex-direction:column;transform:translateX(100%);transition:transform .3s ease-out;}
+  header.active .header-wrap .gnb{transform:translateX(0);}
+  .header-wrap .gnb::before{border-radius:0;background-color:rgba(0,0,0,.92);}
+  .header-wrap .gnb .logo{width:100%;height:auto;flex-shrink:0;display:flex;justify-content:space-between;align-items:center;padding:5.556vw 0;}
+  .header-wrap .gnb .logo a img{width:30vw;}
+  .header-wrap .gnb .logo .btn-close{display:block;}
+  .header-wrap .gnb .logo .btn-close img{width:8vw;}
+  .header-wrap .gnb nav{width:100%;height:auto;overflow-y:auto;flex-direction:column;}
+  .header-wrap .gnb nav > ul{flex-direction:column;width:100%;align-items:flex-start;row-gap:6vw;padding:5.556vw 0;column-gap:0;}
+  .header-wrap .gnb nav > ul > li{width:100%;height:auto;}
+  .header-wrap .gnb nav > ul > li > a{height:auto;font-size:6.5vw;}
+  .header-wrap .gnb nav > ul > li > a::before{display:none;}
+  .header-wrap .gnb nav .nav-sub{position:relative;visibility:visible;opacity:1;transform:none;background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;top:0;left:0;padding:2.5vw 0 0;}
+  .header-wrap .gnb nav .nav-sub > ul{row-gap:3vw;}
+  .header-wrap .gnb nav .nav-sub > ul > li > a{font-size:4vw;color:#cfcfdd;}
+  .header-wrap .util{position:fixed;top:5.556vw;right:6.667vw;height:auto;column-gap:3vw;z-index:2;}
+  .header-wrap .util .btn-nav{display:block;}
+  .header-wrap .util .btn-nav img{width:8vw;}
+  .btn-booking{height:9vw;font-size:3.6vw;padding:0 4vw;}
   .s-hero{height:auto;min-height:140vw;}
   .s-hero h1{font-size:7.5vw;max-width:none;}
   .s-hero p{max-width:none;font-size:3.9vw;}
