@@ -1,0 +1,166 @@
+/* ==========================================================================
+   GroundK Design System — Design Tokens (CSS Custom Properties)
+   Source of truth: groundk.com production CSS (variable/common/main/sub.css)
+
+   Fluid model: sizes are authored in vw against fixed design references.
+     Desktop reference: 1920px  →  1vw = 19.2px
+     Mobile  reference:  360px  →  1vw =  3.6px
+   The layout switches to the mobile scale at @media (max-aspect-ratio: 10/9).
+   Comments show the resolved px @ the desktop reference.
+   ========================================================================== */
+
+:root {
+  /* --- Font families ----------------------------------------------------- */
+  --font-family:      "Pretendard Variable", Pretendard, sans-serif; /* body / KR+Latin */
+  --font-family-sub:  "termina", "Pretendard Variable", Pretendard, sans-serif; /* display / EN / numerals.
+        Termina is Latin-only → Pretendard fallback renders any Korean glyph automatically.
+        Mixed strings (e.g. "APEC 정상회의") route Latin/numerals to Termina, Hangul to Pretendard, per glyph. */
+
+  /* --- Primitive palette -------------------------------------------------- */
+  --color-black:    #0F0F0F;
+  --color-white:    #FFFFFF;
+  --color-navy:     #2E3192;   /* brand primary   */
+  --color-cyan:     #2BD9FF;   /* brand secondary */
+  --color-gray-050: #F8F8F8;   /* off-white section bg            */
+  --color-gray-400: #C4C4C4;   /* border                          */
+  --color-gray-500: #B0B0B0;   /* footer sub links, labels        */
+  --color-gray-600: #636363;   /* marquee / pass-through text     */
+  --color-gray-700: #5C5C5C;   /* secondary text                  */
+
+  /* alpha overlays */
+  --alpha-black-10: rgba(15, 15, 15, 0.1);
+  --alpha-black-20: rgba(0, 0, 0, 0.2);
+  --alpha-black-35: rgba(0, 0, 0, 0.35);
+  --alpha-black-50: rgba(0, 0, 0, 0.5);
+  --alpha-black-60: rgba(0, 0, 0, 0.6);
+  --alpha-black-70: rgba(0, 0, 0, 0.7);
+  --alpha-white-10: rgba(255, 255, 255, 0.1);
+  --alpha-white-90: rgba(248, 248, 248, 0.9);
+
+  /* --- Semantic colors (LIGHT, default) ----------------------------------- */
+  --color-primary:         var(--color-navy);
+  --color-primary-invert:  var(--color-white);
+  --color-secondary:       var(--color-cyan);
+  --color-text:            var(--color-black);
+  --color-text-sub:        var(--color-gray-700);
+  --color-text-fill:       var(--alpha-black-10);
+  --color-border:          var(--color-gray-400);
+  --color-background:      var(--color-white);
+  --color-gray:            var(--color-gray-500); /* legacy alias */
+
+  /* --- Typography ratios -------------------------------------------------- */
+  --font-size:        0.833vw;   /* 16px — root */
+  --line-height:      normal;
+  --lh-none:          1;
+  --lh-tight:         1.06;
+  --lh-snug:          1.08;
+  --lh-heading:       1.2;
+  --lh-body:          1.3;
+  --lh-hero:          0.95;
+  --tracking-tight:   -0.052vw;  /* ≈ -1px @1920 */
+
+  /* --- Font-size scale (vw @1920) ----------------------------------------- */
+  --fs-base: 0.833vw;  /*  16px */
+  --fs-18:   0.938vw;  /*  18px */
+  --fs-20:   1.042vw;  /*  20px */
+  --fs-24:   1.25vw;   /*  24px */
+  --fs-28:   1.458vw;  /*  28px */
+  --fs-32:   1.667vw;  /*  32px */
+  --fs-42:   2.188vw;  /*  42px */
+  --fs-48:   2.5vw;    /*  48px */
+  --fs-52:   2.708vw;  /*  52px */
+  --fs-58:   3.021vw;  /*  58px */
+  --fs-67:   3.49vw;   /*  67px */
+  --fs-72:   3.75vw;   /*  72px */
+  --fs-80:   4.167vw;  /*  80px */
+  --fs-84:   4.375vw;  /*  84px */
+  --fs-100:  5.208vw;  /* 100px */
+  --fs-140:  7.292vw;  /* 140px */
+  --fs-190:  9.896vw;  /* 190px */
+
+  /* --- Spacing scale (4px base, vw @1920) --------------------------------- */
+  --space-4:   0.208vw;  /*   4px */
+  --space-8:   0.417vw;  /*   8px */
+  --space-10:  0.521vw;  /*  10px */
+  --space-12:  0.625vw;  /*  12px */
+  --space-16:  0.833vw;  /*  16px */
+  --space-20:  1.042vw;  /*  20px */
+  --space-24:  1.25vw;   /*  24px */
+  --space-28:  1.458vw;  /*  28px */
+  --space-32:  1.667vw;  /*  32px */
+  --space-36:  1.875vw;  /*  36px */
+  --space-40:  2.083vw;  /*  40px */
+  --space-44:  2.292vw;  /*  44px */
+  --space-48:  2.5vw;    /*  48px */
+  --space-52:  2.708vw;  /*  52px */
+  --space-56:  2.917vw;  /*  56px — title→body */
+  --space-60:  3.125vw;  /*  60px */
+  --space-64:  3.333vw;  /*  64px */
+  --space-80:  4.167vw;  /*  80px — container padding */
+  --space-100: 5.208vw;  /* 100px */
+  --space-120: 6.25vw;   /* 120px — section padding */
+
+  /* --- Radius ------------------------------------------------------------- */
+  --radius-none: 0;
+  --radius-sm:   0.417vw;  /*  8px */
+  --radius-md:   1.042vw;  /* 20px */
+  --radius-full: 100%;
+
+  /* --- Borders ------------------------------------------------------------ */
+  --border-hairline: 1px;
+  --border-thick:    0.156vw;  /* 3px */
+
+  /* --- Elevation / effects ------------------------------------------------ */
+  --shadow-card:   -0.104vw 0.313vw 1.302vw 0 var(--alpha-black-20); /* ≈ -2px 6px 25px */
+  --shadow-screen: -0.417vw 0.26vw 1.042vw 0 var(--alpha-black-20);  /* ≈ -8px 5px 20px */
+  --shadow-drop:    0 0.26vw 1.042vw var(--alpha-black-20);          /* ≈ 0 5px 20px (drop-shadow) */
+  --blur-glass:     15px;
+
+  /* --- Motion ------------------------------------------------------------- */
+  --duration-fast: 0.3s;
+  --easing-out:    ease-out;
+  --transition-base:  all var(--duration-fast) var(--easing-out);
+  --transition-theme: background-color var(--duration-fast) var(--easing-out),
+                      color var(--duration-fast) var(--easing-out);
+
+  /* --- Container ---------------------------------------------------------- */
+  --container-padding: 4.167vw; /* 80px desktop */
+  --section-padding:   6.25vw;  /* 120px desktop */
+}
+
+/* --- Semantic colors (DARK) ---------------------------------------------- */
+:root[data-theme="dark"] {
+  --color-primary:        var(--color-white);
+  --color-primary-invert: var(--color-navy);
+  --color-text:           var(--color-white);
+  --color-text-sub:       var(--color-white);
+  --color-text-fill:      var(--alpha-white-10);
+  --color-background:     var(--color-black);
+}
+
+/* --- Mobile reference re-scale (portrait) -------------------------------- */
+/* Under the mobile layout, vw resolves against ~360px. Helpers that change
+   between references are redefined here; font/space *scales* keep their vw
+   authoring so they shrink naturally. Container padding tightens to 16px. */
+@media (max-aspect-ratio: 10/9) {
+  :root {
+    --container-padding: 4.444vw; /* 16px @360 */
+    --section-padding:   16.667vw;/* 60px @360 */
+    --radius-md:         2.222vw; /*  8px @360 */
+  }
+}
+
+/* --- Korean (국문) overrides --------------------------------------------- */
+/* Apply on Korean pages via <html lang="ko"> (path /kr). Two fixes:
+   1) Display family keeps Termina for Latin/numerals, Pretendard for Hangul (fallback
+      already in --font-family-sub above) — no token change needed here.
+   2) Several display slots were authored with ultra-tight line-height / negative
+      tracking tuned for Termina caps; Korean glyphs have taller ascenders/descenders
+      and clip. Relax the tightest line-height tokens for ko.
+   Component-level clip fixes live in overrides-ko.css (load AFTER style.css on /kr). */
+:root:lang(ko), [lang="ko"] {
+  --lh-hero:   1.1;   /* 0.95 → 1.1  (hero display) */
+  --lh-none:   1.15;  /* 1    → 1.15 (stroke / numerals slots holding Hangul) */
+  --lh-tight:  1.15;  /* 1.06 → 1.15 (section/banner titles) */
+  --lh-snug:   1.2;   /* 1.08 → 1.2  (page hero title) */
+}

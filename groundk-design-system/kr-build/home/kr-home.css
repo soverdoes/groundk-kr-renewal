@@ -1,0 +1,305 @@
+@charset "UTF-8";
+/* =========================================================================
+   GroundK /kr HOME — Frame 1 (사용자 직접 디자인) 1:1 재현
+   기준: Figma "Frame 1" 1920px · 13 섹션 · 다크/라이트 교차
+   모델: GroundK 플루이드 vw (1920 기준, 1vw = 19.2px)
+   이미지: .img-ph (파일명 빈 박스) — 실제 이미지로 교체 예정
+   ========================================================================= */
+
+:root{
+  --navy:#2E3192; --cyan:#2BD9FF;
+  --ink:#0F0F0F; --ink2:#222222; --sub:#5C5C5C; --line:#C4C4C4;
+  --white:#ffffff; --black:#000000;
+  --pad:4.1667vw;          /* 80px */
+  --maxc:91.6667vw;        /* 1760px content */
+  --gap:1.0417vw;          /* 20px */
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  color:var(--ink); background:#000; line-height:1.5; -webkit-font-smoothing:antialiased;
+  word-break:keep-all;
+}
+img{display:block;max-width:100%;}
+a{color:inherit;text-decoration:none;}
+
+/* ---- 공통 ---- */
+.wrap{width:var(--maxc);max-width:1760px;margin:0 auto;}
+.sec{position:relative;}
+.sec.dark{background:#0F0F0F;color:#fff;}
+.sec.black{background:#000;color:#fff;}
+.sec.light{background:#fff;color:var(--ink);}
+.h-sec{font-size:2.7083vw;font-weight:700;line-height:1.25;letter-spacing:-0.01em;}
+.lead{font-size:1.0417vw;font-weight:400;line-height:1.6;}
+.sub{color:var(--sub);}
+
+/* 파일명 빈 박스(이미지 플레이스홀더) */
+.img-ph{
+  width:100%;height:100%;display:flex;align-items:center;justify-content:center;
+  text-align:center;font-size:0.8333vw;letter-spacing:.02em;color:#9aa0b5;
+  background:repeating-linear-gradient(45deg,#1a1c24,#1a1c24 10px,#202330 10px,#202330 20px);
+  border:1px dashed #3a3f55;border-radius:.2vw;padding:1vw;
+}
+.light .img-ph{background:repeating-linear-gradient(45deg,#eef0f4,#eef0f4 10px,#e6e9f0 10px,#e6e9f0 20px);color:#8a90a3;border-color:#cfd4e2;}
+
+/* 버튼 (라인) */
+.btn-line{
+  display:inline-flex;align-items:center;justify-content:center;gap:.4vw;
+  height:2.8125vw;min-height:40px;padding:0 1.667vw;border:1px solid currentColor;border-radius:.25vw;
+  font-size:0.9375vw;font-weight:500;white-space:nowrap;transition:.2s;
+}
+.btn-line:hover{background:currentColor;}
+.btn-line:hover span{color:#0F0F0F;}
+.btn-line span{transition:.2s;}
+.btn-fill{background:var(--navy);border-color:var(--navy);color:#fff;}
+.btn-fill:hover{background:#23266f;}
+.btn-fill:hover span{color:#fff;}
+
+/* =========================================================================
+   GNB (상단 고정 바) — English nav, Frame 1 기준
+   ========================================================================= */
+.gnb{
+  position:absolute;top:0;left:0;width:100%;z-index:50;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.5625vw var(--pad);
+}
+.gnb .logo{font-size:1.25vw;font-weight:800;letter-spacing:.02em;color:#fff;}
+.gnb nav ul{display:flex;gap:2.0833vw;list-style:none;}
+.gnb nav a{font-size:0.9375vw;font-weight:500;color:#fff;opacity:.92;}
+.gnb nav a:hover{opacity:1;}
+.gnb .gnb-r{display:flex;align-items:center;gap:1.0417vw;}
+.gnb .gnb-r .ico{width:1.25vw;height:1.25vw;border:1px solid rgba(255,255,255,.6);border-radius:50%;opacity:.9;}
+
+/* =========================================================================
+   S1 — HERO
+   ========================================================================= */
+.s-hero{height:44.9vw;min-height:520px;color:#fff;overflow:hidden;}
+.s-hero .bg{position:absolute;inset:0;z-index:0;}
+.s-hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.45),rgba(0,0,0,.25) 40%,rgba(0,0,0,.55));}
+.s-hero .bg .img-ph{height:100%;}
+.s-hero .inner{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:1.25vw;padding:0 var(--pad);}
+.s-hero h1{font-size:2.7083vw;font-weight:700;line-height:1.3;max-width:42vw;}
+.s-hero p{font-size:1.0417vw;font-weight:400;line-height:1.6;max-width:40vw;}
+.s-hero .btn-line{margin-top:.5vw;color:#fff;}
+
+/* =========================================================================
+   S2 — MISSION (이동은 비즈니스의 일부입니다)
+   ========================================================================= */
+.s-mission{padding-bottom:5.2vw;}
+.s-mission .topimg{width:100%;height:28.49vw;}
+.s-mission .mwrap{padding:3.6vw var(--pad) 0;}
+.s-mission h2{font-size:2.7083vw;font-weight:700;line-height:1.3;max-width:46vw;margin-bottom:2vw;}
+.s-mission .row{display:grid;grid-template-columns:44.84vw 1fr;gap:3.2vw;align-items:start;}
+.s-mission .leftimg{width:100%;height:22.4vw;}
+.s-mission .rightcol{display:flex;flex-direction:column;gap:1.8vw;}
+.s-mission .rightcol p{font-size:1.0417vw;line-height:1.7;color:#e7e7ef;}
+.s-mission .rightimg{width:100%;height:36.8vw;}
+.s-mission .stroke{
+  margin-top:3vw;font-size:3.0208vw;font-weight:800;line-height:1.2;letter-spacing:.01em;
+  color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.85);
+}
+
+/* =========================================================================
+   S3 — STATS
+   ========================================================================= */
+.s-stats{padding:5.2vw var(--pad);}
+.s-stats .inner{display:flex;align-items:center;justify-content:space-between;max-width:1760px;margin:0 auto;}
+.s-stats .stat{flex:1;text-align:center;}
+.s-stats .stat .num{font-size:3.125vw;font-weight:700;line-height:1.1;}
+.s-stats .stat .lbl{font-size:1.667vw;font-weight:400;margin-top:.6vw;}
+.s-stats .divider{width:1px;height:6.35vw;background:rgba(255,255,255,.4);}
+
+/* =========================================================================
+   S4 — 출장이든 행사든 (이미지+텍스트 풀블리드 교차)
+   ========================================================================= */
+.s-diff{padding:6.25vw 0 0;}
+.s-diff .head{padding:0 var(--pad);margin-bottom:2.6vw;}
+.altrow{display:grid;grid-template-columns:59.9vw 1fr;align-items:center;min-height:26vw;}
+.altrow.rev{grid-template-columns:1fr 59.9vw;}
+.altrow .ph{width:100%;height:26vw;}
+.altrow .txt{padding:0 var(--pad);max-width:34vw;}
+.altrow.rev .txt{justify-self:end;}
+.altrow .txt h3{font-size:1.667vw;font-weight:500;margin-bottom:1vw;}
+.altrow .txt p{font-size:1.0417vw;line-height:1.7;color:#e7e7ef;}
+.s-diff .altrow:last-child{margin-top:6.25vw;}
+
+/* =========================================================================
+   S5 — PAIN (2×2 라인 카드)
+   ========================================================================= */
+.s-pain{padding:6.25vw 0;}
+.s-pain .head{text-align:center;margin-bottom:3vw;}
+.s-pain .grid{display:grid;grid-template-columns:1fr 1fr;gap:1.0417vw;}
+.s-pain .card{border:1px solid rgba(255,255,255,.85);padding:2.1vw 2vw;display:flex;align-items:center;justify-content:center;min-height:8.5vw;}
+.s-pain .card p{font-size:1.0417vw;line-height:1.6;text-align:center;color:#fff;}
+
+/* =========================================================================
+   S6 — PROMISE (3×2 라인 카드)
+   ========================================================================= */
+.s-promise{padding:6.25vw 0;}
+.s-promise .head{text-align:center;max-width:38vw;margin:0 auto 3vw;}
+.s-promise .head p{margin-top:1.2vw;font-size:1.0417vw;line-height:1.6;color:#cfcfdd;}
+.s-promise .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.0417vw;}
+.s-promise .card{border:1px solid rgba(255,255,255,.85);padding:2vw 1.8vw;min-height:9.48vw;}
+.s-promise .card h4{font-size:1.25vw;font-weight:600;margin-bottom:.8vw;}
+.s-promise .card p{font-size:0.9375vw;line-height:1.6;color:#cfcfdd;}
+
+/* =========================================================================
+   S7 — NETWORK MAP
+   ========================================================================= */
+.s-net{padding:6.25vw 0;}
+.s-net .head{text-align:center;margin-bottom:1.5vw;}
+.s-net .map{position:relative;width:var(--maxc);max-width:1760px;margin:0 auto;height:43vw;}
+.s-net .map .mapimg{position:absolute;left:19vw;right:19vw;top:8vw;bottom:6vw;}
+.s-net .city{position:absolute;font-size:2.5vw;font-weight:700;color:var(--navy);}
+.s-net .c-shanghai{left:.4vw;top:8.9vw;}
+.s-net .c-dubai{left:.4vw;top:14.7vw;}
+.s-net .c-bangkok{left:.4vw;top:24.4vw;}
+.s-net .c-singapore{left:.4vw;top:30.2vw;}
+.s-net .c-seoul{right:4.6vw;top:8.9vw;}
+.s-net .c-sydney{right:.4vw;top:14.7vw;}
+.s-net .c-tokyo{right:4.6vw;top:24.4vw;}
+.s-net .c-hongkong{right:.4vw;top:30.2vw;}
+
+/* =========================================================================
+   S8 — SERVICES (3 라인 카드, 아이콘)
+   ========================================================================= */
+.s-svc{padding:3.65vw 0 4.5vw;background:#fff;}
+.s-svc .head{text-align:center;margin-bottom:2.6vw;}
+.s-svc .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.0417vw;}
+.s-svc .card{border:1px solid var(--line);border-radius:.3vw;padding:3vw 2vw;text-align:center;display:flex;flex-direction:column;align-items:center;min-height:20.8vw;justify-content:center;}
+.s-svc .card .ico{width:3.75vw;height:3.75vw;margin-bottom:2.6vw;border-radius:50%;background:#f1f2f8;display:flex;align-items:center;justify-content:center;font-size:1.6vw;color:var(--navy);}
+.s-svc .card h3{font-size:1.667vw;font-weight:400;color:var(--ink);margin-bottom:1vw;}
+.s-svc .card p{font-size:1.0417vw;line-height:1.6;color:var(--sub);}
+
+/* =========================================================================
+   S9 — GLOBAL (3행 이미지+텍스트 교차, 라이트)
+   ========================================================================= */
+.s-global{padding:6.25vw 0 5vw;background:#fff;}
+.s-global .head{padding:0 var(--pad);margin-bottom:2.6vw;}
+.s-global .head h2{color:var(--ink);}
+.s-global .head p{margin-top:1.2vw;font-size:1.0417vw;line-height:1.7;color:var(--sub);max-width:30vw;}
+.s-global .altrow .txt h3{color:var(--ink);font-weight:700;}
+.s-global .altrow .txt p{color:var(--sub);}
+.s-global .altrow .ph{height:20.8vw;}
+.s-global .altrow{min-height:20.8vw;}
+.s-global .altrow + .altrow{margin-top:4.16vw;}
+
+/* =========================================================================
+   S10 — CASES
+   ========================================================================= */
+.s-case{padding:5.2vw 0;background:#fff;}
+.s-case .head{padding:0 var(--pad);margin-bottom:2.9vw;}
+.s-case .head h2{color:var(--ink);}
+.s-case .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.0417vw;}
+.s-case .card .ph{width:100%;height:14.58vw;border-radius:.3vw;}
+.s-case .card .meta{padding-top:1.25vw;}
+.s-case .card .date{font-size:0.9375vw;color:var(--ink2);}
+.s-case .card h3{font-size:1.4583vw;font-weight:600;color:var(--ink2);margin:.6vw 0 .8vw;}
+.s-case .card p{font-size:1.0417vw;line-height:1.5;color:var(--ink2);}
+
+/* =========================================================================
+   S11 — CLIENTS (로고 행)
+   ========================================================================= */
+.s-clients{padding:5.2vw 0;background:#fff;}
+.s-clients .head{padding:0 var(--pad);margin-bottom:2.9vw;}
+.s-clients .head h2{color:var(--ink);}
+.s-clients .row{display:flex;align-items:center;gap:1.5vw;padding:2.6vw 0;border-bottom:1px solid var(--line);}
+.s-clients .row .label{flex:0 0 11.04vw;font-size:1.4583vw;font-weight:600;color:var(--ink2);}
+.s-clients .row .logos{flex:1;display:grid;grid-template-columns:repeat(5,1fr);gap:.78vw;}
+.s-clients .row .logobox{height:4.16vw;border-radius:.2vw;background:#f4f5f8;border:1px solid #eceef4;display:flex;align-items:center;justify-content:center;font-size:0.7vw;color:#aab;}
+
+/* =========================================================================
+   S12 — CTA BANNER
+   ========================================================================= */
+.s-cta{height:18.75vw;min-height:300px;color:#fff;overflow:hidden;display:flex;align-items:center;}
+.s-cta .bg{position:absolute;inset:0;z-index:0;}
+.s-cta .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.8),rgba(0,0,0,.35));}
+.s-cta .inner{position:relative;z-index:2;width:100%;padding:0 var(--pad);display:flex;align-items:center;justify-content:space-between;}
+.s-cta .left{max-width:49vw;}
+.s-cta h2{font-size:2.7083vw;font-weight:700;line-height:1.25;margin-bottom:1vw;}
+.s-cta .left p{font-size:1.0417vw;line-height:1.6;margin-bottom:1.8vw;color:#e7e7ef;}
+.s-cta .btns{display:flex;gap:1vw;}
+.s-cta .btns .btn-line{color:#fff;}
+.s-cta .stroke{font-size:3.0208vw;font-weight:800;letter-spacing:.04em;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.9);}
+
+/* =========================================================================
+   S13 — FOOTER
+   ========================================================================= */
+.s-foot{background:#0F0F0F;color:#fff;padding:6.25vw var(--pad) 2vw;}
+.s-foot .top{display:flex;justify-content:space-between;gap:3vw;padding-bottom:3vw;}
+.s-foot .logo{font-size:1.667vw;font-weight:800;letter-spacing:.02em;}
+.s-foot .cols{display:flex;gap:3.6vw;flex-wrap:wrap;}
+.s-foot .col h5{font-size:0.9375vw;font-weight:600;margin-bottom:1.2vw;opacity:.95;}
+.s-foot .col ul{list-style:none;display:flex;flex-direction:column;gap:.7vw;}
+.s-foot .col a{font-size:0.8333vw;color:#b9bccb;}
+.s-foot .col a:hover{color:#fff;}
+.s-foot .bottom{display:flex;justify-content:space-between;align-items:center;padding-top:1.8vw;border-top:1px solid rgba(255,255,255,.18);}
+.s-foot .bottom .copy{font-size:0.7813vw;color:#9aa0b5;}
+.s-foot .bottom .links{display:flex;gap:1.5vw;}
+.s-foot .bottom .links a{font-size:0.7813vw;color:#b9bccb;}
+
+/* =========================================================================
+   모바일 (max-aspect-ratio:10/9) — 선형 스택 폴백
+   ========================================================================= */
+@media (max-aspect-ratio:10/9){
+  :root{--pad:6.6667vw;}        /* 360 기준 24px */
+  .h-sec{font-size:6.1vw;}
+  .lead,.s-hero p,.altrow .txt p,.s-mission .rightcol p,.s-svc .card p,
+  .s-global .head p,.s-case .card p,.s-promise .card p,.s-pain .card p{font-size:3.9vw;line-height:1.6;}
+  .gnb nav,.gnb .gnb-r{display:none;}
+  .gnb{padding:4vw var(--pad);}
+  .gnb .logo{font-size:5vw;}
+  .s-hero{height:auto;min-height:140vw;}
+  .s-hero h1{font-size:7.5vw;max-width:none;}
+  .s-hero p{max-width:none;font-size:3.9vw;}
+  .s-mission .topimg{height:60vw;}
+  .s-mission h2{font-size:7vw;max-width:none;}
+  .s-mission .row{grid-template-columns:1fr;gap:6vw;}
+  .s-mission .leftimg{height:55vw;}.s-mission .rightimg{height:70vw;}
+  .s-mission .stroke,.s-cta .stroke{font-size:8vw;-webkit-text-stroke:.5px rgba(255,255,255,.85);}
+  .s-stats .inner{flex-wrap:wrap;gap:6vw;}
+  .s-stats .stat{flex:0 0 40%;}
+  .s-stats .stat .num{font-size:9vw;}.s-stats .stat .lbl{font-size:4.4vw;}
+  .s-stats .divider{display:none;}
+  .altrow,.altrow.rev{grid-template-columns:1fr;}
+  .altrow .ph{height:55vw;}
+  .altrow .txt{max-width:none;padding:6vw var(--pad);}
+  .altrow .txt h3{font-size:5.5vw;}
+  .s-diff .altrow:last-child{margin-top:0;}
+  .s-pain .grid,.s-promise .grid,.s-svc .grid,.s-case .grid,.s-global{}
+  .s-pain .grid,.s-promise .grid,.s-svc .grid,.s-case .grid{grid-template-columns:1fr;}
+  .s-pain .card,.s-promise .card{min-height:auto;padding:6vw;}
+  .s-promise .card h4{font-size:4.8vw;}
+  .s-promise .head{max-width:none;}
+  .s-net .map{height:120vw;}
+  .s-net .map .mapimg{left:0;right:0;top:18vw;bottom:18vw;}
+  .s-net .city{font-size:6vw;}
+  .s-net .c-shanghai{top:0;}.s-net .c-dubai{top:9vw;}
+  .s-net .c-seoul{top:0;right:0;}.s-net .c-sydney{top:9vw;}
+  .s-net .c-bangkok{top:auto;bottom:9vw;}.s-net .c-singapore{top:auto;bottom:0;}
+  .s-net .c-tokyo{top:auto;bottom:9vw;right:0;}.s-net .c-hongkong{top:auto;bottom:0;right:0;}
+  .s-svc .card{min-height:auto;padding:8vw 6vw;}
+  .s-svc .card .ico{width:14vw;height:14vw;font-size:6vw;}
+  .s-svc .card h3{font-size:5.5vw;}
+  .s-global .head p{max-width:none;}
+  .s-global .altrow .ph{height:55vw;}
+  .s-case .card .ph{height:50vw;}
+  .s-case .card h3{font-size:5.2vw;}
+  .s-clients .row{flex-direction:column;align-items:flex-start;gap:3vw;}
+  .s-clients .row .label{font-size:5vw;}
+  .s-clients .row .logos{grid-template-columns:repeat(2,1fr);width:100%;gap:2.5vw;}
+  .s-clients .row .logobox{height:16vw;font-size:2.6vw;}
+  .s-cta{height:auto;padding:14vw 0;}
+  .s-cta .inner{flex-direction:column;align-items:flex-start;gap:6vw;}
+  .s-cta .left{max-width:none;}
+  .s-cta h2{font-size:7vw;}
+  .s-cta .stroke{display:none;}
+  .s-foot .top{flex-direction:column;gap:8vw;}
+  .s-foot .cols{gap:8vw;}
+  .s-foot .logo{font-size:6vw;}
+  .s-foot .col h5{font-size:3.6vw;}.s-foot .col a{font-size:3.2vw;}
+  .s-foot .bottom{flex-direction:column;align-items:flex-start;gap:3vw;}
+  .s-foot .bottom .copy,.s-foot .bottom .links a{font-size:3vw;}
+}

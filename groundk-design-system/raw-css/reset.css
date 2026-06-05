@@ -1,0 +1,271 @@
+@charset "utf-8";
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del,
+dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt,
+var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas,
+details, embed, figure, figcaption, footer, header, hgroup, menu, nav,
+output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline
+}
+
+html {
+    font-size: var(--font-size);
+    color: var(--color-text);
+    overflow-y: overlay;
+    overscroll-behavior: none;
+    touch-action: auto;
+    -webkit-overflow-scrolling: touch;
+    /* scroll-behavior: smooth; */
+}
+
+body, button {
+    font-family: var(--font-family), sans-serif;
+}
+
+body {
+    -webkit-text-size-adjust: none;
+    line-height: var(--line-height);
+}
+
+input, textarea, option, select {
+    font-family: var(--font-family), sans-serif;
+    font-size: var(--font-size);
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    vertical-align: middle;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+    border: 1px solid var(--color-border);
+    font-size: 1em;
+    padding: 1em;
+    box-sizing: border-box;
+    color: var(--color-text);
+    appearance: none;
+    border-radius:0;
+}
+
+*{
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+}
+*::before, *::after{
+    box-sizing: border-box;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+img {
+    vertical-align: middle;
+    -ms-interpolation-mode: bicubic !important;
+}
+
+ul, li, ol, li, dl, dd, dt {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+caption {
+    visibility: hidden;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+}
+
+legend, hr {
+    visibility: hidden;
+    position: absolute;
+    left: -9999px;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    font-size: 0;
+}
+
+/* Button */
+button {
+    overflow: visible;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    vertical-align: middle;
+    cursor: pointer;
+    font-size: 1em;
+    line-height: 1;
+    border-radius: 0;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+input[type="text"], input[type="password"], input[type="tel"], input[type="email"], input[type="file"], input[type="number"] {
+    appearance: none;
+    border-radius: 0;
+    border:1px solid var(--color-border);
+    height: 2.083vw;
+    padding:0 1em;
+    box-sizing: border-box;
+    color: var(--color-text);
+    background-color: #fff;
+}
+
+input[type="number"], input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+    appearance: none;
+    margin: 0;
+    border-radius: 0;
+}
+
+input[type="date"], input[type="date"]::-webkit-inner-spin-button, input[type="date"]::-webkit-outer-spin-button {
+    appearance: none;
+    margin: 0;
+}
+
+input[type="button"], input[type="submit"] {
+    cursor: pointer;
+    appearance: none;
+    border-radius: 0;
+}
+
+select{
+    appearance: none;
+    border-radius: 0;
+    /* background-image: url(../img/ico_select_arrow.png);
+    background-position: center right 1em; */
+    background-repeat: no-repeat;
+    border:1px solid var(--color-border);
+    height: 2.083vw;
+    padding:0 1em;
+    box-sizing: border-box;
+    color: var(--color-text);
+    background-color: #fff;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+select:focus {
+    /* background-image: url(../img/ico_select_arrow.png); */
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="tel"]:focus, input[type="email"]:focus, input[type="file"]:focus, select:focus, textarea:focus {
+    border-color: var(--color-primary);
+}
+
+/* link */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    /*color: inherit*/
+}
+
+/* clearfix */
+.clearfix:after {
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+    font-size: 0;
+    content: '';
+}
+
+.clearfix {
+    display: block;
+}
+
+::placeholder {
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+}
+
+a:focus, button:focus, select:focus, input:focus, input:focus+label, textarea:focus, label:focus {
+    outline: none;
+}
+
+input[type="text"]:read-only, input[type="password"]:read-only, input[type="tel"]:read-only, input[type="email"]:read-only, input[type="file"]:read-only {}
+
+/*scrollbar hidden*/
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* 프린트 출력시 배경그래픽 자동 설정 */
+@media print and (color) {
+   * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
+
+/* @media (orientation: landscape){
+    html {
+        transform: rotate(-90deg);
+        transform-origin: top left;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100vh;
+        height: 100vw;
+    }
+} */
+
+/* iOS vh BUG FIX  */
+@supports (-webkit-touch-callout: none) {
+    html {
+        height: --webkit-fill-available;
+    }
+}
+
+/* lenis recommended */
+html.lenis, html.lenis body {
+    height: auto;
+}
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+.lenis.lenis-scrolling iframe {
+    pointer-events: none;
+}

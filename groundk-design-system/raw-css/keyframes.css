@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+@keyframes test01 {
+    0% {
+    }
+    100% {
+    }
+}
+
+@keyframes test02 {
+    from {
+    }
+    to {
+    }
+}

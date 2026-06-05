@@ -1,0 +1,166 @@
+@charset "UTF-8";
+/* ==========================================================================
+   GroundK /kr HOME — 신규 섹션 스타일 (이미지 적극 활용 버전 v2)
+   컬러 = variable.css 변수, 크기 = vw 스케일(1920 기준),
+   모바일 = @media (max-aspect-ratio: 10/9) (360 기준).
+   로드 순서: slick.css → style.css → overrides-ko.css → kr-home.css
+   ========================================================================== */
+
+/* --- 공통 유틸 ----------------------------------------------------------- */
+.eyebrow{
+    font-size: 1.458vw; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--color-primary); font-family: var(--font-family-sub);
+    margin-bottom: 0.833vw; transition: color .3s ease-out;
+}
+.kr-keep{ word-break: keep-all; }
+
+/* 보조 카피 라인 (섹션 리드/마무리/모토) */
+.sec-lead{ font-size: 1.25vw; line-height: 1.6; color: var(--color-text-sub); margin-bottom: 2.917vw; transition: color .3s ease-out; }
+.sec-close{ font-size: 1.25vw; line-height: 1.6; color: var(--color-text-sub); margin-top: 2.917vw; transition: color .3s ease-out; }
+.sct-mission .mlead{ font-size: 1.667vw; font-weight: 700; color: var(--color-text); margin-bottom: 1.042vw; transition: color .3s ease-out; }
+@media (max-aspect-ratio: 10/9){
+    .sec-lead{ font-size: 3.889vw; margin-bottom: 8.889vw; }
+    .sec-close{ font-size: 3.889vw; margin-top: 8.889vw; }
+    .sct-mission .mlead{ font-size: 5vw; margin-bottom: 3.333vw; }
+}
+
+/* 이미지 자리표시(placeholder) — 실제 이미지로 교체 예정 */
+.img-ph{
+    width: 100%; height: 100%; box-sizing: border-box;
+    display: flex; align-items: center; justify-content: center; text-align: center;
+    background: repeating-linear-gradient(45deg,#f2f2f2,#f2f2f2 10px,#ececec 10px,#ececec 20px);
+    border: 1px dashed var(--color-border); color: #8a8a8a;
+    font-size: 0.833vw; font-family: var(--font-family); padding: 1vw; word-break: break-all;
+}
+.img-ph.is-dark{ background: repeating-linear-gradient(45deg,#1a1a1a,#1a1a1a 10px,#222 10px,#222 20px); color:#9a9a9a; border-color:#333; }
+.img-ph.is-cover{ position:absolute; top:0; left:0; }
+/* 자체 비율로 높이를 갖는 박스(부모 높이 없을 때) */
+.img-ph.ph-21{ aspect-ratio:21/9; height:auto; }
+.img-ph.ph-2x1{ aspect-ratio:2/1;  height:auto; }
+.img-ph.ph-169{ aspect-ratio:16/9; height:auto; }
+.img-ph.ph-43{ aspect-ratio:4/3;  height:auto; }
+.img-ph.ph-32{ aspect-ratio:3/2;  height:auto; }
+.img-ph.ph-11{ aspect-ratio:1/1;  height:auto; }
+
+/* on-dark 버튼 변형 */
+.comm-button.on-dark{ color: var(--color-white); border-color: var(--color-white); }
+.comm-button.on-dark::before{ background-color: var(--color-white); }
+.comm-button.on-dark .img-mask{ background-color: var(--color-white); }
+.comm-button.on-dark:hover{ color: var(--color-black); }
+.comm-button.on-dark:hover .img-mask{ background-color: var(--color-black); }
+
+/* === [1] 히어로 ========================================================= */
+.sct-khero{ position: relative; width:100%; height: 100vh; overflow: hidden; color: var(--color-white); }
+.sct-khero .bg{ position:absolute; inset:0; }
+.sct-khero .bg video,.sct-khero .bg .img-ph{ width:100%; height:100%; object-fit:cover; }
+.sct-khero .bg::after{ content:""; position:absolute; inset:0; background: linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.65) 100%); }
+.sct-khero .atc-content{ position:relative; height:100%; display:flex; flex-direction:column; justify-content:flex-end; padding-bottom: 8.333vw; }
+.sct-khero .eyebrow{ color: var(--color-secondary); }
+.sct-khero .title{ font-size: 3.889vw; font-weight: 700; line-height: 1.15; }
+.sct-khero .lead{ font-size: 1.25vw; line-height: 1.5; color: rgba(255,255,255,0.82); margin-top: 1.25vw; max-width: 46vw; }
+.sct-khero .btns{ display:flex; column-gap: 1.042vw; margin-top: 2.292vw; }
+
+/* === 미션 보강 (재사용 sct-content 위에 이미지 2-col) ==================== */
+.sct-mission .descript > ul{ align-items: stretch; }
+.sct-mission .descript > ul > li .image .img-ph{ width:100%; height:100%; }
+.sct-mission .descript > ul > li.col-img{ display:flex; }
+.sct-mission .descript > ul > li.col-img .image{ width:100%; }
+
+/* === [3] 핵심 수치 (배경 이미지 밴드) =================================== */
+.sct-stats{ position:relative; padding: 6.25vw 0; color: var(--color-white); overflow:hidden; }
+.sct-stats .bg{ position:absolute; inset:0; }
+.sct-stats .bg .img-ph{ width:100%; height:100%; }
+.sct-stats .bg::after{ content:""; position:absolute; inset:0; background: rgba(15,15,15,0.72); }
+.sct-stats .inner{ position:relative; }
+.sct-stats ul{ display:flex; }
+.sct-stats li{ flex:1 1 0; padding: 0 2.083vw; border-left: 1px solid rgba(255,255,255,0.22); }
+.sct-stats li:first-child{ border-left:0; padding-left:0; }
+.sct-stats .num{ font-family: var(--font-family-sub); font-size: 4.167vw; font-weight: 700; line-height: 1; color: var(--color-white); }
+.sct-stats .label{ font-size: 1.042vw; color: rgba(255,255,255,0.72); margin-top: 1.042vw; }
+
+/* === [5] 공감 Pain (이미지 카드) ======================================= */
+.sct-pain{ padding: 6.25vw 0; }
+.sct-pain .comm-title{ margin-bottom: 2.917vw; }
+.sct-pain .list ul{ display:grid; grid-template-columns: repeat(2,1fr); gap: 2.083vw; }
+.sct-pain .list li{ border: 1px solid var(--color-border); overflow:hidden; display:flex; flex-direction:column; transition: border-color .3s ease-out; }
+.sct-pain .list li .image .img-ph{ width:100%; }
+.sct-pain .list li .body{ padding: 2.083vw 2.292vw 2.5vw; display:flex; flex-direction:column; row-gap: 0.833vw; }
+.sct-pain .list li .tag{ font-size: 0.938vw; font-weight: 700; color: var(--color-primary); text-transform: uppercase; letter-spacing: 0.04em; }
+.sct-pain .list li .desc{ font-size: 1.25vw; line-height: 1.4; color: var(--color-text); transition: color .3s ease-out; }
+
+/* === [6] 다섯 가지 약속 (아이콘 + 카드) ================================ */
+.sct-promise{ padding: 6.25vw 0; }
+.sct-promise .head{ text-align:center; margin-bottom: 3.125vw; }
+.sct-promise .head .intro{ font-size: 1.25vw; line-height: 1.6; color: var(--color-text-sub); margin-top: 1.25vw; }
+.sct-promise .list ul{ display:grid; grid-template-columns: repeat(3,1fr); gap:1px; background: var(--color-border); border:1px solid var(--color-border); }
+.sct-promise .list li{ background: var(--color-background); padding: 2.5vw 2.083vw; display:flex; flex-direction:column; row-gap: 1.042vw; transition: background-color .3s ease-out; }
+.sct-promise .list li .ico{ width: 3.333vw; }
+.sct-promise .list li .ico .img-ph{ background:#f2f2f2; }
+.sct-promise .list li .no{ font-family: var(--font-family-sub); font-size: 1.042vw; font-weight: 700; color: var(--color-primary); }
+.sct-promise .list li .tit{ font-size: 1.667vw; font-weight: 700; color: var(--color-text); transition: color .3s ease-out; }
+.sct-promise .list li .desc{ font-size: 1.042vw; line-height: 1.4; color: var(--color-text-sub); transition: color .3s ease-out; }
+.sct-promise .list li.is-brand{ background: var(--color-primary); }
+.sct-promise .list li.is-brand .tit,.sct-promise .list li.is-brand .desc{ color: var(--color-primary-invert); }
+
+/* === 서비스 2영역 (재사용 sct-content.content-05) 버튼 간격 ============ */
+.sct-content.content-05 .descript > ul > li .text .btn{ margin-top: 1.667vw; }
+
+/* === 파트너(YGP) 카드 이미지 (재사용 sct-content + .sct-partner) ======= */
+.sct-partner .descript > ul > li{ row-gap: 1.667vw; }
+.sct-partner .descript > ul > li .image .img-ph{ width:100%; }
+.sct-partner .descript > ul > li .text .tit{ margin-top: 0.417vw; }
+
+/* === [11] 고객사 로고 (로고 박스) ===================================== */
+.sct-logos{ padding: 6.25vw 0; }
+.sct-logos .comm-title{ margin-bottom: 2.917vw; }
+.sct-logos .list li{ display:flex; align-items:center; column-gap: 2.083vw; padding: 1.875vw 0; border-top: 1px solid var(--color-border); }
+.sct-logos .list li:last-child{ border-bottom: 1px solid var(--color-border); }
+.sct-logos .list li .cat{ flex: 0 0 12vw; font-size: 1.25vw; font-weight: 700; color: var(--color-text); }
+.sct-logos .list li .brands{ display:flex; flex-wrap:wrap; gap: 1.25vw; align-items:center; }
+.sct-logos .list li .brands .logo-ph{ width: 8.5vw; }
+.sct-logos .list li .brands .logo-ph .img-ph{ aspect-ratio: 17/6; height:auto; }
+
+/* ==========================================================================
+   MOBILE (portrait, 360 기준)
+   ========================================================================== */
+@media (max-aspect-ratio: 10/9){
+    .eyebrow{ font-size: 3.889vw; margin-bottom: 2.222vw; }
+
+    .sct-khero{ height: 100vh; }
+    .sct-khero .atc-content{ padding-bottom: 22.222vw; }
+    .sct-khero .title{ font-size: 8.889vw; line-height: 1.25; }
+    .sct-khero .lead{ font-size: 3.889vw; max-width: 100%; margin-top: 4.444vw; }
+    .sct-khero .btns{ flex-direction: column; row-gap: 3.333vw; margin-top: 6.667vw; }
+
+    .sct-stats{ padding: 13.889vw 0; }
+    .sct-stats ul{ flex-wrap: wrap; }
+    .sct-stats li{ flex: 1 1 50%; border-left: 0; padding: 5.556vw 0; border-top: 1px solid rgba(255,255,255,0.22); }
+    .sct-stats .num{ font-size: 11.111vw; }
+    .sct-stats .label{ font-size: 3.333vw; margin-top: 2.222vw; }
+
+    .sct-pain{ padding: 16.667vw 0; }
+    .sct-pain .comm-title{ margin-bottom: 8.889vw; }
+    .sct-pain .list ul{ grid-template-columns: 1fr; gap: 6.667vw; }
+    .sct-pain .list li .body{ padding: 5.556vw 5.556vw 6.667vw; row-gap: 2.222vw; }
+    .sct-pain .list li .tag{ font-size: 3.333vw; }
+    .sct-pain .list li .desc{ font-size: 4.167vw; }
+
+    .sct-promise{ padding: 16.667vw 0; }
+    .sct-promise .head{ margin-bottom: 8.889vw; }
+    .sct-promise .head .intro{ font-size: 3.889vw; margin-top: 4.444vw; }
+    .sct-promise .list ul{ grid-template-columns: 1fr; }
+    .sct-promise .list li{ padding: 6.667vw; row-gap: 3.333vw; }
+    .sct-promise .list li .ico{ width: 11.111vw; }
+    .sct-promise .list li .no{ font-size: 4.444vw; }
+    .sct-promise .list li .tit{ font-size: 5vw; }
+    .sct-promise .list li .desc{ font-size: 3.889vw; }
+
+    .sct-logos{ padding: 16.667vw 0; }
+    .sct-logos .comm-title{ margin-bottom: 8.889vw; }
+    .sct-logos .list li{ flex-direction: column; align-items:flex-start; row-gap: 4.444vw; padding: 6.667vw 0; }
+    .sct-logos .list li .cat{ flex:none; font-size: 5vw; }
+    .sct-logos .list li .brands{ gap: 4.444vw; }
+    .sct-logos .list li .brands .logo-ph{ width: 28vw; }
+
+    .img-ph{ font-size: 3.333vw; }
+}

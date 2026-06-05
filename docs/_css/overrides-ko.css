@@ -1,0 +1,93 @@
+/* ==========================================================================
+   GroundK — Korean (국문) display overrides
+   Load order:  font.css → variable.css → ... → main.css → sub.css → overrides-ko.css
+   Apply scope: Korean pages only. Page root must carry lang="ko":
+                <html lang="ko">   (path /kr/…)
+
+   WHY: The site's display slots use the sub family (Termina, Latin-only) with
+   ultra-tight line-heights and negative tracking tuned for Latin caps. When Korean
+   text falls into those slots it (a) renders via the Pretendard fallback added to
+   --font-family-sub, and (b) clips vertically / looks cramped under LH 0.72–1.08
+   and negative letter-spacing. This file relaxes ONLY the slots that hold copy
+   (not the numeral/English-only slots), scoped to [lang="ko"] so the English build
+   is untouched.
+
+   RULE OF THUMB
+   - Keep Termina for purely English / numeric ornaments (step numbers "01", "NEXT",
+     "PREVIOUS", pass-through marquee, the GroundK wordmark) — do NOT override these.
+   - For slots that will hold Korean sentences, relax line-height ≥ 1.1 and reset
+     negative tracking to normal.
+   ========================================================================== */
+
+/* Home hero — giant split title (was LH 0.95) */
+[lang="ko"] .sct-design .atc-content .text .title {
+  line-height: 1.1;
+  letter-spacing: normal;
+  word-break: keep-all;     /* don't split Korean words mid-syllable */
+}
+
+/* Outline display text .txt-stroke (was LH 1) — welcome / content / contact / 404 / banner */
+[lang="ko"] .txt-stroke {
+  line-height: 1.15;
+  letter-spacing: normal;
+}
+
+/* Page hero title .sct-visual (Termina, was LH 1.08) */
+[lang="ko"] .sct-visual .atc-content .text .title {
+  line-height: 1.2;
+  letter-spacing: normal;
+  word-break: keep-all;
+}
+
+/* Banner-01 Termina title (was LH 1.2, centered) */
+[lang="ko"] .sct-banner.banner-01 .atc-content .text .title {
+  line-height: 1.25;
+  letter-spacing: normal;
+}
+
+/* Case-studies gallery headline + card titles (Termina) */
+[lang="ko"] #wrap.case-studies .sct-gallery .atc-text .title,
+[lang="ko"] #wrap.case-studies .sct-gallery .atc-text .stroke {
+  line-height: 1.15;
+  letter-spacing: normal;
+  word-break: keep-all;
+}
+[lang="ko"] #wrap.case-studies .sct-gallery .atc-content .list li .text .title {
+  line-height: 1.3;
+}
+
+/* Fleet type title — had negative tracking -0.052vw + LH 1 */
+[lang="ko"] #wrap.our-global-fleet .sct-fleet .atc-type .image .txt .tit {
+  line-height: 1.15;
+  letter-spacing: normal;
+  word-break: keep-all;
+}
+
+/* Contact stroke headline (Termina/txt-stroke covered above, but title here is Pretendard already) */
+[lang="ko"] #wrap.contact-us .sct-contact .atc-text .title {
+  word-break: keep-all;
+}
+
+/* 404 — title LH 0.72 clips Korean hard */
+[lang="ko"] .sct-404 .atc-content .content .text .title {
+  line-height: 1.05;
+  letter-spacing: normal;
+  word-break: keep-all;
+}
+
+/* Privacy/Terms & generic page hero title (sct-title, Termina, LH 1.08) */
+[lang="ko"] .sct-title .atc-content .text .title {
+  line-height: 1.2;
+  letter-spacing: normal;
+  word-break: keep-all;
+}
+
+/* Optional global safety: keep Korean words intact in section titles */
+[lang="ko"] .comm-title { word-break: keep-all; }
+
+/* DO-NOT-OVERRIDE (kept Termina, English/numeric only):
+   .sct-step .text::before          → "01, 02" numerals
+   .sct-pagination .direction::after → "NEXT" / "PREVIOUS"
+   .sct-content .pass-through p      → English marquee
+   footer/header GroundK wordmark (img-mask SVG, not text)
+*/
