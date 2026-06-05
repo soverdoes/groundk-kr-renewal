@@ -225,7 +225,7 @@ header{position:fixed;top:0;left:0;width:100%;z-index:100;transition:all .3s eas
 .s-clients .row{display:flex;align-items:center;gap:1.5vw;padding:2.6vw 0;border-bottom:1px solid var(--line);}
 .s-clients .row .label{flex:0 0 11.04vw;font-size:1.4583vw;font-weight:600;color:var(--ink2);}
 .s-clients .row .logos{flex:1;display:grid;grid-template-columns:repeat(5,1fr);gap:.78vw;}
-.s-clients .row .logobox{height:4.16vw;border-radius:.2vw;background:#f4f5f8;border:1px solid #eceef4;display:flex;align-items:center;justify-content:center;font-size:0.7vw;color:#aab;}
+.s-clients .row .logobox{height:4.16vw;border-radius:.2vw;background:#f4f5f8;border:1px dashed #cfd4e2;display:flex;align-items:center;justify-content:center;font-size:0.8333vw;letter-spacing:.02em;color:#8a90a3;}
 
 /* =========================================================================
    S12 — CTA BANNER
