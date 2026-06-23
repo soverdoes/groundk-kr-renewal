@@ -171,3 +171,66 @@
   .header-wrap .util .btn-nav{display:block;}
   .btn-booking{height:8vw;font-size:3.6vw;padding:0 3.5vw;}
 }
+
+
+/* ===== 문의하기 — 탭 + 조건부 폼 ===== */
+.kr-contact{display:grid;grid-template-columns:1fr 24.5vw;gap:3.125vw;align-items:start;}
+.kc-sub{margin:.9vw 0 2.2vw;font-size:1.0417vw;line-height:1.5;color:var(--color-sub,#5C5C5C);}
+.kc-tabs{display:flex;flex-wrap:wrap;gap:.625vw;margin-bottom:1.8vw;}
+.kc-tab{font-size:.9896vw;font-weight:500;padding:.78vw 1.25vw;border:1px solid var(--color-border,#C4C4C4);border-radius:.3vw;background:#fff;color:var(--color-text,#0F0F0F);cursor:pointer;transition:.15s;white-space:nowrap;}
+.kc-tab:hover{border-color:var(--color-primary,#2E3192);}
+.kc-tab.is-active{background:var(--color-primary,#2E3192);border-color:var(--color-primary,#2E3192);color:#fff;}
+.kc-tagline{font-size:1.25vw;font-weight:600;color:var(--color-text,#0F0F0F);margin:0 0 1.6vw;}
+.kc-pane{display:none;}
+.kc-pane.is-active{display:block;}
+.kf-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1vw 1.25vw;}
+.kf-field{display:flex;flex-direction:column;gap:.5vw;margin-bottom:1.1vw;}
+.kf-field label{font-size:.9375vw;font-weight:600;color:var(--color-text,#0F0F0F);}
+.kf-field .req{color:#E0463E;font-style:normal;margin-left:.1vw;}
+.kf-field input,.kf-field select,.kf-field textarea{
+  font-family:inherit;font-size:.9375vw;color:var(--color-text,#0F0F0F);
+  padding:.78vw .9vw;border:1px solid var(--color-border,#C4C4C4);border-radius:.3vw;background:#fff;width:100%;transition:.15s;
+}
+.kf-field input::placeholder,.kf-field textarea::placeholder{color:#9aa0b0;}
+.kf-field input:focus,.kf-field select:focus,.kf-field textarea:focus{outline:none;border-color:var(--color-primary,#2E3192);box-shadow:0 0 0 2px rgba(46,49,146,.12);}
+.kf-field textarea{resize:vertical;min-height:7vw;line-height:1.5;}
+.kf-checks{display:flex;flex-wrap:wrap;gap:.6vw 1.4vw;padding:.4vw 0;}
+.kf-checks label{display:flex;align-items:center;gap:.4vw;font-size:.9375vw;font-weight:400;color:var(--color-text,#0F0F0F);cursor:pointer;}
+.kf-checks input{width:1vw;height:1vw;accent-color:var(--color-primary,#2E3192);}
+.kf-agree{display:flex;align-items:flex-start;gap:.5vw;margin:1.4vw 0 1.8vw;font-size:.8854vw;line-height:1.5;color:var(--color-sub,#5C5C5C);cursor:pointer;}
+.kf-agree input{margin-top:.18vw;width:.95vw;height:.95vw;accent-color:var(--color-primary,#2E3192);flex-shrink:0;}
+.kc-submit{display:flex;justify-content:center;}
+.kc-btn{font-family:inherit;font-size:1.0417vw;font-weight:600;color:#fff;background:var(--color-primary,#2E3192);border:0;border-radius:.3vw;padding:.94vw 3.2vw;cursor:pointer;transition:.15s;}
+.kc-btn:hover{background:#23266f;}
+.kc-done{margin-top:1.2vw;text-align:center;font-size:.9896vw;color:var(--color-primary,#2E3192);font-weight:600;}
+.kc-aside{display:flex;flex-direction:column;gap:1.25vw;position:sticky;top:6vw;}
+.kc-card{border:1px solid var(--color-border,#C4C4C4);border-radius:.5vw;padding:1.6vw 1.5vw;}
+.kc-card-tit{font-size:1.25vw;font-weight:700;color:var(--color-text,#0F0F0F);margin-bottom:1.2vw;}
+.kc-card dl{margin-bottom:1vw;}
+.kc-card dl:last-child{margin-bottom:0;}
+.kc-card dt{font-size:.9375vw;font-weight:600;color:var(--color-text,#0F0F0F);margin-bottom:.25vw;}
+.kc-card dd{font-size:.9375vw;line-height:1.45;color:var(--color-sub,#5C5C5C);}
+
+@media (max-aspect-ratio:10/9){
+  .kr-contact{grid-template-columns:1fr;gap:9vw;}
+  .kc-sub{font-size:3.9vw;margin:2.5vw 0 6vw;}
+  .kc-tabs{gap:2vw;margin-bottom:6vw;}
+  .kc-tab{font-size:3.6vw;padding:2.8vw 4vw;}
+  .kc-tagline{font-size:4.8vw;margin-bottom:5vw;}
+  .kf-grid{grid-template-columns:1fr;gap:0;}
+  .kf-field{gap:1.8vw;margin-bottom:4.5vw;}
+  .kf-field label,.kf-field input,.kf-field select,.kf-field textarea,.kf-checks label{font-size:3.9vw;}
+  .kf-field input,.kf-field select,.kf-field textarea{padding:3vw 3.5vw;}
+  .kf-field textarea{min-height:30vw;}
+  .kf-checks{gap:2.5vw 5vw;}
+  .kf-checks input{width:4vw;height:4vw;}
+  .kf-agree{font-size:3.4vw;gap:2vw;margin:5vw 0 6vw;}
+  .kf-agree input{width:4vw;height:4vw;margin-top:.6vw;}
+  .kc-btn{font-size:4.4vw;padding:3.8vw 12vw;width:100%;}
+  .kc-done{font-size:3.9vw;margin-top:5vw;}
+  .kc-aside{position:static;gap:5vw;}
+  .kc-card{border-radius:2vw;padding:6vw 5.5vw;}
+  .kc-card-tit{font-size:5vw;margin-bottom:4.5vw;}
+  .kc-card dt,.kc-card dd{font-size:3.9vw;}
+  .kc-card dl{margin-bottom:4vw;}
+}

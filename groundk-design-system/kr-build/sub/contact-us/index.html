@@ -69,39 +69,136 @@
             </div>
         </section>
 
-        <!-- 연락처 -->
+        <!-- 문의하기 (탭 + 조건부 폼) -->
         <section class="kr-sec">
             <div class="inner">
-                <div class="comm-title kr-keep">연락처</div>
-                <table class="kr-table">
-                    <tbody>
-                        <tr><th>전화</th><td class="kr-keep">+82-2-863-3540 (24시간)</td></tr>
-                        <tr><th>이메일</th><td>ops@groundk.com</td></tr>
-                    </tbody>
-                </table>
-                <p class="sub-h kr-keep">오피스</p>
-                <table class="kr-table">
-                    <tbody>
-                        <tr><th>서울 본사</th><td class="kr-keep">강서구 양천로30길 123-28, 5층 (마곡 NH타워)</td></tr>
-                        <tr><th>부산</th><td class="kr-keep">해운대구 센텀동로 45, 405호</td></tr>
-                        <tr><th>싱가포르</th><td>Asia Square Tower 1</td></tr>
-                        <tr><th>방콕</th><td>Biz Center, Lat Krabang</td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
+                <div class="kr-contact">
+                    <!-- 좌: 폼 -->
+                    <div class="kc-main">
+                        <div class="comm-title kr-keep">문의하기</div>
+                        <p class="kc-sub kr-keep">목적에 맞는 문의를 선택하세요.<br>담당자가 빠르게 연락드리겠습니다.</p>
 
-        <!-- 문의 유형 -->
-        <section class="kr-sec alt">
-            <div class="inner">
-                <div class="comm-title kr-keep">문의 유형</div>
-                <div class="kr-cards col-4">
-                    <ul>
-                        <li><p class="tit">출장 차량 예약 · 견적</p><p class="desc kr-keep">공항 픽업, 전용차량, 패스트트랙.</p></li>
-                        <li><p class="tit">기업 전용 상담</p><p class="desc kr-keep">기업 계정, 전담 매니저, 통합 관리. 기존 출장 여행사와 병행 가능.</p></li>
-                        <li><p class="tit">이벤트 수송 상담</p><p class="desc kr-keep">국제회의, 컨퍼런스, 브랜드 행사, 스포츠. 해외 현지 행사 수송 포함.</p></li>
-                        <li><p class="tit">제휴 · 파트너십</p><p class="desc kr-keep">현지 수송 제휴, 시스템 연동, 협력 문의.</p></li>
-                    </ul>
+                        <!-- 탭 -->
+                        <div class="kc-tabs" role="tablist">
+                            <button type="button" class="kc-tab is-active" data-pane="0">출장 차량 예약 · 견적</button>
+                            <button type="button" class="kc-tab" data-pane="1">기업 전용 상담</button>
+                            <button type="button" class="kc-tab" data-pane="2">이벤트 수송 상담</button>
+                            <button type="button" class="kc-tab" data-pane="3">제휴 · 파트너십</button>
+                        </div>
+
+                        <form class="kc-form" novalidate>
+                            <p class="kc-tagline kr-keep" data-tagline>공항 픽업, 전용차량, 패스트트랙.</p>
+
+                            <!-- 공통 -->
+                            <div class="kf-grid">
+                                <div class="kf-field"><label>담당자명 <i class="req">*</i></label><input type="text" name="name" placeholder="담당자명을 입력해 주세요"></div>
+                                <div class="kf-field"><label>회사/기관명 <i class="req">*</i></label><input type="text" name="company" placeholder="회사/기관명을 입력해 주세요"></div>
+                                <div class="kf-field"><label>이메일 <i class="req">*</i></label><input type="email" name="email" placeholder="연락 가능한 이메일 주소를 입력해 주세요"></div>
+                                <div class="kf-field"><label>연락처 <i class="req">*</i></label><input type="tel" name="phone" placeholder="연락 가능한 연락처를 입력해 주세요"></div>
+                            </div>
+
+                            <!-- 유형별: 0 출장 차량 예약·견적 -->
+                            <div class="kc-pane is-active" data-pane="0">
+                                <div class="kf-field"><label>서비스 종류 <i class="req">*</i></label>
+                                    <div class="kf-checks">
+                                        <label><input type="checkbox" name="svc"> 공항 픽업</label>
+                                        <label><input type="checkbox" name="svc"> 전용차량(시간제)</label>
+                                        <label><input type="checkbox" name="svc"> 공항 패스트트랙</label>
+                                        <label><input type="checkbox" name="svc"> 편도 이동</label>
+                                    </div>
+                                </div>
+                                <div class="kf-grid">
+                                    <div class="kf-field"><label>이용 도시·국가 <i class="req">*</i></label><input type="text" placeholder="예: 서울, 도쿄, 싱가포르"></div>
+                                    <div class="kf-field"><label>이용 예정일 <i class="req">*</i></label><input type="date"></div>
+                                    <div class="kf-field"><label>픽업 장소</label><input type="text" placeholder="출발지"></div>
+                                    <div class="kf-field"><label>목적지</label><input type="text" placeholder="도착지"></div>
+                                    <div class="kf-field"><label>탑승 인원 <i class="req">*</i></label><select><option value="" disabled selected>인원을 선택해 주세요</option><option>1명</option><option>2~3명</option><option>4~6명</option><option>7명 이상</option></select></div>
+                                    <div class="kf-field"><label>차량 등급 희망</label><select><option value="" disabled selected>선택해 주세요</option><option>이코노미</option><option>비즈니스</option><option>프리미엄</option><option>밴</option></select></div>
+                                    <div class="kf-field"><label>항공편 정보</label><input type="text" placeholder="편명·도착시각 (공항 픽업 시)"></div>
+                                    <div class="kf-field"><label>왕복 여부</label><select><option value="" disabled selected>선택해 주세요</option><option>편도</option><option>왕복</option></select></div>
+                                </div>
+                            </div>
+
+                            <!-- 유형별: 1 기업 전용 상담 -->
+                            <div class="kc-pane" data-pane="1">
+                                <div class="kf-field"><label>필요 서비스 <i class="req">*</i></label>
+                                    <div class="kf-checks">
+                                        <label><input type="checkbox" name="csvc"> 임원 출장</label>
+                                        <label><input type="checkbox" name="csvc"> 공항 픽업</label>
+                                        <label><input type="checkbox" name="csvc"> 로드쇼</label>
+                                        <label><input type="checkbox" name="csvc"> 정기 셔틀</label>
+                                        <label><input type="checkbox" name="csvc"> 통합 정산</label>
+                                    </div>
+                                </div>
+                                <div class="kf-grid">
+                                    <div class="kf-field"><label>회사 규모(임직원 수)</label><select><option value="" disabled selected>선택해 주세요</option><option>~50명</option><option>50~300명</option><option>300~1,000명</option><option>1,000명 이상</option></select></div>
+                                    <div class="kf-field"><label>예상 이용 규모(월)</label><select><option value="" disabled selected>선택해 주세요</option><option>~10회</option><option>10~50회</option><option>50~100회</option><option>100회 이상</option></select></div>
+                                    <div class="kf-field"><label>주요 이용 도시·국가</label><input type="text" placeholder="예: 서울·도쿄·두바이"></div>
+                                    <div class="kf-field"><label>기존 출장 여행사(TMC) 이용</label><select><option value="" disabled selected>선택해 주세요</option><option>이용 중 (병행 희망)</option><option>없음</option></select></div>
+                                    <div class="kf-field"><label>결제 방식 희망</label><select><option value="" disabled selected>선택해 주세요</option><option>법인카드</option><option>세금계산서</option><option>월 정산</option></select></div>
+                                    <div class="kf-field"><label>도입 희망 시기</label><select><option value="" disabled selected>선택해 주세요</option><option>즉시</option><option>1개월 내</option><option>분기 내</option><option>미정</option></select></div>
+                                </div>
+                            </div>
+
+                            <!-- 유형별: 2 이벤트 수송 상담 -->
+                            <div class="kc-pane" data-pane="2">
+                                <div class="kf-grid">
+                                    <div class="kf-field"><label>행사 유형 <i class="req">*</i></label><select><option value="" disabled selected>선택해 주세요</option><option>국제회의·정상회의</option><option>컨퍼런스·컨벤션</option><option>브랜드 행사</option><option>스포츠</option><option>기타</option></select></div>
+                                    <div class="kf-field"><label>예상 참가자 규모 <i class="req">*</i></label><select><option value="" disabled selected>선택해 주세요</option><option>~50명</option><option>50~200명</option><option>200~500명</option><option>500~1,000명</option><option>1,000명 이상</option></select></div>
+                                    <div class="kf-field"><label>행사 도시·국가 <i class="req">*</i></label><input type="text" placeholder="개최지 (해외 가능)"></div>
+                                    <div class="kf-field"><label>행사명</label><input type="text" placeholder="행사명을 입력해 주세요"></div>
+                                    <div class="kf-field"><label>행사 시작일 <i class="req">*</i></label><input type="date"></div>
+                                    <div class="kf-field"><label>행사 종료일</label><input type="date"></div>
+                                    <div class="kf-field"><label>예상 차량·셔틀 규모</label><select><option value="" disabled selected>선택해 주세요</option><option>~5대</option><option>5~20대</option><option>20~50대</option><option>50대 이상</option></select></div>
+                                    <div class="kf-field"><label>수송 구간</label><input type="text" placeholder="예: 공항↔호텔↔행사장"></div>
+                                </div>
+                                <div class="kf-field"><label>필요 서비스</label>
+                                    <div class="kf-checks">
+                                        <label><input type="checkbox" name="esvc"> 공항 영접·의전</label>
+                                        <label><input type="checkbox" name="esvc"> VIP 의전</label>
+                                        <label><input type="checkbox" name="esvc"> 참가자 셔틀</label>
+                                        <label><input type="checkbox" name="esvc"> 현장 관제</label>
+                                        <label><input type="checkbox" name="esvc"> 다국어 스태프</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 유형별: 3 제휴·파트너십 -->
+                            <div class="kc-pane" data-pane="3">
+                                <div class="kf-grid">
+                                    <div class="kf-field"><label>제휴 유형 <i class="req">*</i></label><select><option value="" disabled selected>선택해 주세요</option><option>현지 수송 파트너</option><option>시스템·기술 연동</option><option>리셀러·영업 제휴</option><option>공동 마케팅</option><option>기타</option></select></div>
+                                    <div class="kf-field"><label>사업 지역·국가</label><input type="text" placeholder="운영 도시·국가"></div>
+                                </div>
+                                <div class="kf-field"><label>회사 소개·웹사이트</label><input type="url" placeholder="https://"></div>
+                                <div class="kf-field"><label>보유 역량/자산</label><input type="text" placeholder="예: 보유 차량, 운영 도시, 주요 고객군"></div>
+                                <div class="kf-field"><label>협의 희망 방식</label><select><option value="" disabled selected>선택해 주세요</option><option>이메일</option><option>전화</option><option>미팅</option></select></div>
+                            </div>
+
+                            <!-- 공통: 문의내용 + 동의 -->
+                            <div class="kf-field"><label data-msglabel>문의내용 <i class="req">*</i></label><textarea rows="5" placeholder="문의 사항을 자유롭게 작성해 주세요"></textarea></div>
+                            <label class="kf-agree"><input type="checkbox"> <span class="kr-keep">개인정보 수집 및 이용에 동의합니다. (이름, 연락처, 이메일을 문의 응대 목적으로 수집하며, 응대 완료 후 6개월 이내 파기합니다.)</span></label>
+
+                            <div class="kc-submit"><button type="submit" class="kc-btn">문의 접수</button></div>
+                            <p class="kc-done kr-keep" hidden>문의가 접수되었습니다. 담당자가 빠르게 연락드리겠습니다.</p>
+                        </form>
+                    </div>
+
+                    <!-- 우: 사이드바 -->
+                    <aside class="kc-aside">
+                        <div class="kc-card">
+                            <div class="kc-card-tit kr-keep">연락처 정보</div>
+                            <dl><dt>대표 전화</dt><dd class="kr-keep">+82-2-863-3540 (24시간)</dd></dl>
+                            <dl><dt>운영 시간</dt><dd class="kr-keep">평일 09:00 – 18:00</dd></dl>
+                            <dl><dt>문의 메일</dt><dd>ops@groundk.com</dd></dl>
+                        </div>
+                        <div class="kc-card">
+                            <div class="kc-card-tit kr-keep">오피스</div>
+                            <dl><dt>기술연구소</dt><dd class="kr-keep">서울 강서구 양천로30길 123-28, 5층 (마곡NH타워)</dd></dl>
+                            <dl><dt>본사</dt><dd class="kr-keep">부산광역시 해운대구 센텀동로 45, 405</dd></dl>
+                            <dl><dt>싱가포르</dt><dd>Asia Square Tower 1</dd></dl>
+                            <dl><dt>방콕</dt><dd>Biz Center, Lat Krabang</dd></dl>
+                        </div>
+                    </aside>
                 </div>
             </div>
         </section>
@@ -151,5 +248,24 @@
 <script defer src="/resources/js/lenis.min.js"></script>
 <script defer src="/resources/js/slick.min.js"></script>
 <script defer src="/resources/js/pages/common.js"></script>
-<script defer src="/resources/js/pages/final.js"></script></body>
+<script defer src="/resources/js/pages/final.js"></script>
+<script>
+/* 문의 유형 탭 + 조건부 폼 */
+(function(){
+  var root=document.querySelector('.kr-contact'); if(!root) return;
+  var TAGS=['공항 픽업, 전용차량, 패스트트랙.','기업 계정, 전담 매니저, 통합 관리. 기존 출장 여행사와 병행 가능.','국제회의, 컨퍼런스, 브랜드 행사, 스포츠. 해외 현지 행사 수송 포함.','현지 수송 제휴, 시스템 연동, 협력 문의.'];
+  var tabs=root.querySelectorAll('.kc-tab'), panes=root.querySelectorAll('.kc-pane');
+  var tagline=root.querySelector('[data-tagline]'), msglabel=root.querySelector('[data-msglabel]');
+  function activate(i){
+    tabs.forEach(function(t,n){t.classList.toggle('is-active',n===i);});
+    panes.forEach(function(p){p.classList.toggle('is-active',+p.dataset.pane===i);});
+    if(tagline) tagline.textContent=TAGS[i];
+    if(msglabel) msglabel.innerHTML=(i===3?'제안 내용':'문의내용')+' <i class="req">*</i>';
+  }
+  tabs.forEach(function(t){t.addEventListener('click',function(){activate(+t.dataset.pane);});});
+  var form=root.querySelector('.kc-form'), done=root.querySelector('.kc-done');
+  if(form) form.addEventListener('submit',function(e){e.preventDefault(); if(done){done.hidden=false; done.scrollIntoView({behavior:'smooth',block:'center'});}});
+})();
+</script>
+</body>
 </html>
