@@ -188,9 +188,14 @@
 .kf-field label{font-size:.9375vw;font-weight:600;color:var(--color-text,#0F0F0F);}
 .kf-field .req{color:#E0463E;font-style:normal;margin-left:.1vw;}
 .kf-field input,.kf-field select,.kf-field textarea{
-  font-family:inherit;font-size:.9375vw;color:var(--color-text,#0F0F0F);
-  padding:.78vw .9vw;border:1px solid var(--color-border,#C4C4C4);border-radius:.3vw;background:#fff;width:100%;transition:.15s;
+  font-family:inherit;font-size:.9375vw;line-height:1.5;color:var(--color-text,#0F0F0F);
+  height:auto;box-sizing:border-box;
+  padding:.85vw .9vw;border:1px solid var(--color-border,#C4C4C4);border-radius:.3vw;background:#fff;width:100%;transition:.15s;
 }
+.kf-field select{min-height:2.95vw;appearance:none;-webkit-appearance:none;-moz-appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath fill='none' stroke='%235C5C5C' stroke-width='1.5' d='M1 1.5 6 6.5 11 1.5'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right .9vw center;background-size:.7vw auto;padding-right:2.2vw;}
+.kf-field input[type=date]{min-height:2.95vw;}
 .kf-field input::placeholder,.kf-field textarea::placeholder{color:#9aa0b0;}
 .kf-field input:focus,.kf-field select:focus,.kf-field textarea:focus{outline:none;border-color:var(--color-primary,#2E3192);box-shadow:0 0 0 2px rgba(46,49,146,.12);}
 .kf-field textarea{resize:vertical;min-height:7vw;line-height:1.5;}
@@ -220,7 +225,8 @@
   .kf-grid{grid-template-columns:1fr;gap:0;}
   .kf-field{gap:1.8vw;margin-bottom:4.5vw;}
   .kf-field label,.kf-field input,.kf-field select,.kf-field textarea,.kf-checks label{font-size:3.9vw;}
-  .kf-field input,.kf-field select,.kf-field textarea{padding:3vw 3.5vw;}
+  .kf-field input,.kf-field select,.kf-field textarea{padding:3vw 3.5vw;line-height:1.5;}
+  .kf-field select{min-height:11vw;background-position:right 3.5vw center;background-size:3vw auto;padding-right:9vw;}
   .kf-field textarea{min-height:30vw;}
   .kf-checks{gap:2.5vw 5vw;}
   .kf-checks input{width:4vw;height:4vw;}
