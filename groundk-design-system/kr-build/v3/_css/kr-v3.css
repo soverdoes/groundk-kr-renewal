@@ -1,0 +1,63 @@
+/* ===== GroundK /kr ver.3 — IA v3.8 additions ===== */
+/* Loaded after kr-sub.css + kr-v2.css. New components for the 6-GNB IA build. */
+
+/* header util: 상담·문의 + 예약 both visible at right */
+.header-wrap .util { display:flex; align-items:center; gap:1.042vw; }
+.btn-consult { display:inline-flex; align-items:center; height:2.5vw; padding:0 1.25vw;
+  border:1px solid #fff; border-radius:1.5vw; color:#fff; font-size:.833vw; font-weight:600;
+  white-space:nowrap; transition:background .2s,color .2s; }
+.btn-consult:hover { background:#fff; color:var(--color-primary); }
+
+/* quick facts grid (city pages) */
+.kr-quickfacts { display:grid; grid-template-columns:repeat(3,1fr); gap:1.25vw; }
+.kr-quickfacts > div { border:1px solid var(--color-border); border-radius:.6vw; padding:1.6vw 1.8vw;
+  display:flex; flex-direction:column; row-gap:.4vw; }
+.kr-quickfacts .k { font-size:.938vw; font-weight:700; color:var(--color-primary); }
+.kr-quickfacts .v { font-size:1.25vw; font-weight:600; color:var(--color-text); line-height:1.4; }
+
+/* media row: alternating image + text (zigzag), variety vs cards */
+.kr-mediarow { display:grid; grid-template-columns:1fr 1fr; gap:3.125vw; align-items:center; margin:0 0 3.125vw; }
+.kr-mediarow:last-child { margin-bottom:0; }
+.kr-mediarow.flip .m-text { order:2; }
+.kr-mediarow .m-img .img-ph { width:100%; }
+.kr-mediarow .m-text .tag { font-size:.938vw; font-weight:700; color:var(--color-primary); letter-spacing:.04em; }
+.kr-mediarow .m-text .tit { font-size:1.875vw; font-weight:700; color:var(--color-text); margin:.4vw 0 .8vw; line-height:1.3; }
+.kr-mediarow .m-text .desc { font-size:1.094vw; line-height:1.6; color:var(--color-text-sub); }
+
+/* big stat band (trust / numbers) */
+.kr-stats { display:grid; grid-template-columns:repeat(4,1fr); gap:1.25vw; text-align:center; }
+.kr-stats > div { padding:1.5vw 1vw; border-left:1px solid var(--color-border); }
+.kr-stats > div:first-child { border-left:0; }
+.kr-stats .num { font-size:2.917vw; font-weight:800; color:var(--color-primary); line-height:1; letter-spacing:-.02em; }
+.kr-stats .lbl { font-size:1.042vw; color:var(--color-text-sub); margin-top:.6vw; }
+
+/* simple tabs (contact) */
+.kr-tabs { display:flex; gap:.521vw; flex-wrap:wrap; }
+.kr-tabs a, .kr-tabs button { padding:.78vw 1.6vw; border:1px solid var(--color-border); border-radius:2vw;
+  font-size:1.042vw; color:var(--color-text-sub); cursor:pointer; background:#fff; }
+.kr-tabs a.active, .kr-tabs button.active { background:var(--color-primary); color:#fff; border-color:var(--color-primary); }
+
+/* logo wall */
+.kr-logowall { display:grid; grid-template-columns:repeat(6,1fr); gap:1.042vw; }
+.kr-logowall > div { border:1px solid var(--color-border); border-radius:.4vw; aspect-ratio:16/7;
+  display:flex; align-items:center; justify-content:center; font-size:.99vw; color:var(--color-text-sub);
+  text-align:center; padding:.5vw; }
+
+@media (max-aspect-ratio:10/9){
+  .header-wrap .util { gap:2.5vw; }
+  .btn-consult { display:none; }   /* mobile: 상담은 메뉴/푸터에서 */
+  .kr-quickfacts { grid-template-columns:1fr; gap:3.5vw; }
+  .kr-quickfacts .k { font-size:3.4vw; }
+  .kr-quickfacts .v { font-size:4.4vw; }
+  .kr-mediarow { grid-template-columns:1fr; gap:5vw; margin-bottom:9vw; }
+  .kr-mediarow.flip .m-text { order:0; }
+  .kr-mediarow .m-text .tit { font-size:6.4vw; }
+  .kr-mediarow .m-text .desc { font-size:4vw; }
+  .kr-stats { grid-template-columns:repeat(2,1fr); gap:5vw 1vw; }
+  .kr-stats > div { border-left:0; }
+  .kr-stats .num { font-size:9vw; }
+  .kr-stats .lbl { font-size:3.6vw; }
+  .kr-tabs a, .kr-tabs button { font-size:3.6vw; padding:2.4vw 4vw; border-radius:6vw; }
+  .kr-logowall { grid-template-columns:repeat(3,1fr); gap:2.5vw; }
+  .kr-logowall > div { font-size:3vw; }
+}

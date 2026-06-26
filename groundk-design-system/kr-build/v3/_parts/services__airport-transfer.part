@@ -1,0 +1,155 @@
+TITLE: 공항 픽업·샌딩 — 그라운드케이 GroundK
+DESC: 인천·김포공항과 해외 50개 도시 공항 픽업·샌딩. 항공편 지연에도 한국어 24/7 안내, 게이트 영접·수하물·목적지까지 한 곳에서.
+BODYCLASS: services-airport-transfer
+---MAIN---
+<section class="kr-hero">
+  <div class="bg"><div class="img-ph is-dark is-cover">services-airport-transfer-hero.jpg</div></div>
+  <div class="inner">
+    <p class="tag">공항 픽업·샌딩</p>
+    <h1>인천·김포공항과 해외 50개 도시 주요 공항.</h1>
+    <p class="lead">항공편 지연이 있는 날도, 도착 게이트부터 목적지까지 한국어로 안내합니다. 임원의 첫 동선과 마지막 동선을 한 곳에서 책임집니다.</p>
+    <div class="btns">
+      <a href="/kr/booking" class="comm-button"><span>예약 문의</span><i class="img-mask"></i></a>
+      <a href="/kr/cities" class="comm-button"><span>운영 도시 보기</span><i class="img-mask"></i></a>
+    </div>
+  </div>
+</section>
+
+<section class="kr-sec">
+  <div class="inner">
+    <div class="comm-title">도착부터 목적지까지, 끊김 없는 동선</div>
+    <p class="sec-lead">출발지와 도착지가 어느 도시든, 픽업·샌딩 한 건의 흐름은 동일합니다. 담당자가 따로 챙기지 않아도 다음 단계로 이어집니다.</p>
+    <div class="kr-cards col-3 as-flow">
+      <ul>
+        <li>
+          <p class="tit">사전 배차·항공편 확인</p>
+          <p class="desc">예약된 항공편을 모니터링해, 실제 도착 시각에 맞춰 차량과 기사를 배차합니다. 지연·조기 도착도 반영합니다.</p>
+        </li>
+        <li>
+          <p class="tit">게이트 영접</p>
+          <p class="desc">현지 의전 기사 또는 미팅 스태프가 도착 게이트에서 성함 안내판으로 영접합니다. 입국장 혼잡 속에서도 동선을 안내합니다.</p>
+        </li>
+        <li>
+          <p class="tit">수하물·차량 동행</p>
+          <p class="desc">수하물 수취를 돕고 대기 차량까지 동행합니다. 주차·픽업 구역을 찾을 필요 없이 곧바로 탑승합니다.</p>
+        </li>
+        <li>
+          <p class="tit">목적지 이동</p>
+          <p class="desc">호텔·회의장·관저 등 목적지까지 이동합니다. 일정 변경이 생기면 한국어 운영팀이 현지 기사와 직접 조율합니다.</p>
+        </li>
+      </ul>
+    </div>
+    <p class="sec-close">샌딩(출국 배웅)도 동일한 흐름으로, 출발 시각과 공항 사정에 맞춰 역순으로 진행합니다.</p>
+  </div>
+</section>
+
+<section class="kr-sec alt">
+  <div class="inner">
+    <div class="comm-title">공항 픽업·샌딩의 핵심 특징</div>
+    <p class="sec-lead">생소한 공항에서 임원이 헤매지 않도록, 운영 단계마다 사람이 개입합니다.</p>
+    <div class="kr-cards col-2 as-list">
+      <ul>
+        <li>
+          <p class="tit">실시간 항공편 연동 배차</p>
+          <p class="desc">예약 항공편의 지연·결항·조기 도착을 추적해 배차 시각을 자동 조정합니다. 도착이 늦어져도 차량이 먼저 떠나지 않습니다.</p>
+        </li>
+        <li>
+          <p class="tit">한국어 24/7 운영 지원</p>
+          <p class="desc">영접 시각, 미팅 위치, 일정 변경을 한국어 운영팀이 안내합니다. 출장지의 시차와 무관하게 담당자가 연락할 곳이 한 곳입니다.</p>
+        </li>
+        <li>
+          <p class="tit">검증된 현지 의전 파트너</p>
+          <p class="desc">50개 도시의 의전 파트너 네트워크를 통해, 기사 신원과 차량 등급이 확인된 인력만 투입합니다.</p>
+        </li>
+        <li>
+          <p class="tit">한국 법인 정산</p>
+          <p class="desc">세금계산서·원화 결제·법인카드를 지원합니다. 환전이나 해외 결제 처리 없이 국내 회계 절차로 마감합니다.</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="kr-sec">
+  <div class="inner">
+    <div class="comm-title">호출 서비스와 무엇이 다른가</div>
+    <p class="sec-lead">현지 호출 앱이나 무작위 배차와 비교하면, 공항 픽업·샌딩에서 차이가 분명해집니다.</p>
+    <div class="kr-table compare">
+      <table>
+        <thead>
+          <tr><th></th><th>현지 호출 앱</th><th class="hl">그라운드케이</th><th>일반 현지 수배</th></tr>
+        </thead>
+        <tbody>
+          <tr><th>차량 찾기</th><td>승객이 직접 픽업 구역 탐색</td><td class="hl">게이트 영접·차량 동행</td><td>기사와 위치 협의 필요</td></tr>
+          <tr><th>언어</th><td>현지어 위주</td><td class="hl">한국어 운영팀 상시 연결</td><td>현지어·영어</td></tr>
+          <tr><th>항공편 지연</th><td>배차 취소·재호출</td><td class="hl">항공편 연동 자동 조정</td><td>별도 연락 필요</td></tr>
+          <tr><th>요금</th><td>수요·시간대 변동</td><td class="hl">사전 확정 요금</td><td>현지 협의·변동</td></tr>
+          <tr><th>정산</th><td>해외 카드 결제</td><td class="hl">세금계산서·원화·법인카드</td><td>현지 정산</td></tr>
+          <tr><th>기사 검증</th><td>플랫폼 평점 의존</td><td class="hl">파트너 신원·차량 확인</td><td>건별 상이</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="sec-close">임원 동선에서는 "차량이 온다"가 아니라 "누가, 언제, 어디서 맞이하는가"가 중요합니다.</p>
+  </div>
+</section>
+
+<section class="kr-sec alt">
+  <div class="inner">
+    <div class="comm-title">서비스 안내</div>
+    <p class="sec-lead">예약 전에 확인하는 운영 기준입니다.</p>
+    <div class="kr-spec">
+      <div><span class="k">무료 대기</span><span class="v">국제선 도착 후 60분 (지연 시 항공편 기준 연장)</span></div>
+      <div><span class="k">기사 정보</span><span class="v">기사 성명·연락처·차량 정보 사전 공유</span></div>
+      <div><span class="k">요금 포함</span><span class="v">영접·수하물 동행·통행료·주차 포함 사전 확정</span></div>
+      <div><span class="k">서비스 지역</span><span class="v">인천·김포공항 및 해외 50개 도시 주요 공항</span></div>
+    </div>
+    <p class="sec-close">탑승 인원, 수하물 수량, 차량 등급에 따른 안내는 예약 문의 시 함께 정리해 드립니다.</p>
+  </div>
+</section>
+
+<section class="sct-accordion kr-sec">
+  <div class="atc-content">
+    <div class="inner">
+      <div class="comm-title">자주 묻는 질문</div>
+      <div class="list">
+        <ul>
+          <li>
+            <div>
+              <div class="acc-title"><p>Q. 항공편이 지연되면 추가 요금이 붙나요?</p><div class="ico-plus"></div></div>
+              <div class="acc-sub"><p>예약된 항공편을 모니터링해 실제 도착 시각에 배차를 맞춥니다. 항공사 사유의 지연으로 인한 대기는 추가 요금 없이 항공편 도착 기준으로 처리합니다.</p></div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="acc-title"><p>Q. 입국장에서 어떻게 만나나요?</p><div class="ico-plus"></div></div>
+              <div class="acc-sub"><p>현지 기사 또는 미팅 스태프가 도착 게이트에서 성함이 적힌 안내판으로 영접합니다. 기사 성명과 연락처는 출발 전 미리 공유해 드립니다.</p></div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="acc-title"><p>Q. 한국어로 연락할 수 있나요?</p><div class="ico-plus"></div></div>
+              <div class="acc-sub"><p>가능합니다. 영접 시각·위치·일정 변경은 한국어 운영팀이 24시간 안내하며, 현지 기사와의 조율도 운영팀이 대신 진행합니다.</p></div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="acc-title"><p>Q. 결제와 세금계산서 발행은 어떻게 되나요?</p><div class="ico-plus"></div></div>
+              <div class="acc-sub"><p>한국 법인을 통해 세금계산서 발행, 원화 결제, 법인카드 결제를 지원합니다. 해외 결제나 환전 없이 국내 회계 절차로 마감할 수 있습니다.</p></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="kr-cta">
+  <div class="bg"><div class="img-ph is-dark is-cover">services-airport-transfer-cta.jpg</div></div>
+  <div class="inner">
+    <p class="title">출장 첫 동선부터 한국어로 안내받으세요.</p>
+    <div class="btns">
+      <a href="/kr/booking" class="comm-button"><span>예약</span><i class="img-mask"></i></a>
+      <a href="/kr/contact" class="comm-button"><span>상담·문의</span><i class="img-mask"></i></a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,143 @@
+TITLE: 운영 도시 — 50개 도시 의전 차량 네트워크 — 그라운드케이 GroundK
+DESC: 도쿄·싱가포르·두바이·뉴욕까지 50개 도시 의전 파트너 네트워크. 해외 출장 차량 수배를 한국에서 한 곳으로, 한국어 24/7 운영.
+BODYCLASS: cities
+---MAIN---
+<section class="kr-hero">
+  <div class="bg"><div class="img-ph is-dark is-cover">cities-hero.jpg</div></div>
+  <div class="inner">
+    <p class="eyebrow">Cities</p>
+    <h1 class="hero-title">50개 도시, 한 곳에서 끝납니다.</h1>
+    <p class="hero-lead">아시아·중동·유럽·미주 50개 도시에 검증된 의전 파트너를 두고 있습니다. 어느 도시든 현지 차량 수배를 한국어 운영팀이 한 곳에서 정리합니다.</p>
+    <div class="btns">
+      <a href="/kr/booking" class="comm-button"><span>출장 차량 예약</span><i class="img-mask"></i></a>
+      <a href="/kr/contact" class="comm-button"><span>상담·문의</span><i class="img-mask"></i></a>
+    </div>
+  </div>
+</section>
+
+<section class="kr-sec">
+  <div class="inner">
+    <div class="comm-title">하나의 네트워크, 여섯 개 권역</div>
+    <p class="sec-lead">일본·중화권·동남아·중동·유럽·미주 6개 권역에 걸쳐 의전 파트너를 직접 검증하고 연결합니다. 도시가 바뀌어도 담당자와 정산 방식은 한국에서 그대로 유지됩니다.</p>
+    <div class="img-ph">cities-map.jpg</div>
+    <div class="kr-stats">
+      <div><div class="num">50</div><div class="lbl">운영 도시</div></div>
+      <div><div class="num">6</div><div class="lbl">권역</div></div>
+      <div><div class="num">24/7</div><div class="lbl">한국어 운영</div></div>
+      <div><div class="num">9</div><div class="lbl">년 운영 경험</div></div>
+    </div>
+    <p class="sec-close">APEC 2025 운영을 포함해 9년간 쌓은 도시별 운영 데이터가 네트워크의 기준입니다.</p>
+  </div>
+</section>
+
+<section class="kr-sec alt">
+  <div class="inner">
+    <div class="comm-title">주요 운영 도시 30</div>
+    <p class="sec-lead">출장 수요가 많은 30개 핵심 도시입니다. 도시명을 눌러 도시별 차량 등급·운영 방식을 확인하세요.</p>
+    <div class="kr-cards col-3 as-list">
+      <ul>
+        <li><p class="tit"><a href="/kr/cities/seoul">서울</a></p><p class="desc">대한민국 · 인바운드 의전</p></li>
+        <li><p class="tit"><a href="/kr/cities/busan">부산</a></p><p class="desc">대한민국 · 인바운드 의전</p></li>
+        <li><p class="tit"><a href="/kr/cities/tokyo">도쿄</a></p><p class="desc">일본</p></li>
+        <li><p class="tit"><a href="/kr/cities/osaka">오사카</a></p><p class="desc">일본</p></li>
+        <li><p class="tit"><a href="/kr/cities/fukuoka">후쿠오카</a></p><p class="desc">일본</p></li>
+        <li><p class="tit"><a href="/kr/cities/shanghai">상하이</a></p><p class="desc">중화권</p></li>
+        <li><p class="tit"><a href="/kr/cities/hong-kong">홍콩</a></p><p class="desc">중화권</p></li>
+        <li><p class="tit"><a href="/kr/cities/beijing">베이징</a></p><p class="desc">중화권</p></li>
+        <li><p class="tit"><a href="/kr/cities/guangzhou">광저우</a></p><p class="desc">중화권</p></li>
+        <li><p class="tit"><a href="/kr/cities/taipei">타이베이</a></p><p class="desc">중화권</p></li>
+        <li><p class="tit"><a href="/kr/cities/singapore">싱가포르</a></p><p class="desc">동남아</p></li>
+        <li><p class="tit"><a href="/kr/cities/bangkok">방콕</a></p><p class="desc">동남아</p></li>
+        <li><p class="tit"><a href="/kr/cities/ho-chi-minh">호치민</a></p><p class="desc">동남아</p></li>
+        <li><p class="tit"><a href="/kr/cities/hanoi">하노이</a></p><p class="desc">동남아</p></li>
+        <li><p class="tit"><a href="/kr/cities/jakarta">자카르타</a></p><p class="desc">동남아</p></li>
+        <li><p class="tit"><a href="/kr/cities/manila">마닐라</a></p><p class="desc">동남아</p></li>
+        <li><p class="tit"><a href="/kr/cities/kuala-lumpur">쿠알라룸푸르</a></p><p class="desc">동남아</p></li>
+        <li><p class="tit"><a href="/kr/cities/dubai">두바이</a></p><p class="desc">중동</p></li>
+        <li><p class="tit"><a href="/kr/cities/abu-dhabi">아부다비</a></p><p class="desc">중동</p></li>
+        <li><p class="tit"><a href="/kr/cities/sydney">시드니</a></p><p class="desc">오세아니아</p></li>
+        <li><p class="tit"><a href="/kr/cities/milan">밀라노</a></p><p class="desc">유럽</p></li>
+        <li><p class="tit"><a href="/kr/cities/paris">파리</a></p><p class="desc">유럽</p></li>
+        <li><p class="tit"><a href="/kr/cities/frankfurt">프랑크푸르트</a></p><p class="desc">유럽</p></li>
+        <li><p class="tit"><a href="/kr/cities/amsterdam">암스테르담</a></p><p class="desc">유럽</p></li>
+        <li><p class="tit"><a href="/kr/cities/rome">로마</a></p><p class="desc">유럽</p></li>
+        <li><p class="tit"><a href="/kr/cities/madrid">마드리드</a></p><p class="desc">유럽</p></li>
+        <li><p class="tit"><a href="/kr/cities/new-york">뉴욕</a></p><p class="desc">미주</p></li>
+        <li><p class="tit"><a href="/kr/cities/los-angeles">로스앤젤레스</a></p><p class="desc">미주</p></li>
+        <li><p class="tit"><a href="/kr/cities/san-francisco">샌프란시스코</a></p><p class="desc">미주</p></li>
+        <li><p class="tit"><a href="/kr/cities/toronto">토론토</a></p><p class="desc">미주</p></li>
+      </ul>
+    </div>
+    <p class="sec-close">목록에 없는 도시도 권역 파트너망을 통해 대응합니다. 출장 일정을 알려주시면 운영 가능 여부를 먼저 확인해 드립니다.</p>
+  </div>
+</section>
+
+<section class="kr-sec">
+  <div class="inner">
+    <div class="comm-title">권역별 운영 인덱스</div>
+    <p class="sec-lead">출장 동선이 걸치는 권역을 먼저 확인하세요. 권역별로 검증된 도시와 추가 운영 도시를 함께 운영합니다.</p>
+    <div class="kr-cards col-3 as-stripes">
+      <ul>
+        <li>
+          <p class="tag">Japan</p>
+          <p class="tit">일본</p>
+          <p class="desc">도쿄·오사카·후쿠오카·요코하마·고베·나고야. 한국 기업 출장 수요가 가장 많은 권역으로, 도시 간 연속 일정을 한 담당자가 운영합니다.</p>
+        </li>
+        <li>
+          <p class="tag">Greater China</p>
+          <p class="tit">중화권</p>
+          <p class="desc">상하이·홍콩·베이징·광저우·타이베이·선전·칭다오. 제조·금융 출장과 전시·컨퍼런스 동선을 폭넓게 커버합니다.</p>
+        </li>
+        <li>
+          <p class="tag">Southeast Asia</p>
+          <p class="tit">동남아</p>
+          <p class="desc">싱가포르·방콕·호치민·하노이·자카르타·마닐라·쿠알라룸푸르·다낭·세부·푸껫. IR 로드쇼와 생산 거점 출장이 함께 발생하는 권역입니다.</p>
+        </li>
+        <li>
+          <p class="tag">Middle East</p>
+          <p class="tit">중동</p>
+          <p class="desc">두바이·아부다비·도하. 정부·발주처 미팅과 대형 행사 의전을 고려한 차량 등급과 보안 동선을 운영합니다.</p>
+        </li>
+        <li>
+          <p class="tag">Europe</p>
+          <p class="tit">유럽</p>
+          <p class="desc">밀라노·파리·프랑크푸르트·암스테르담·로마·마드리드·베를린·빈·바르셀로나·이스탄불. 다도시 로드쇼와 럭셔리·문화 브랜드 의전을 함께 운영합니다.</p>
+        </li>
+        <li>
+          <p class="tag">Americas &amp; Oceania</p>
+          <p class="tit">미주·오세아니아</p>
+          <p class="desc">뉴욕·로스앤젤레스·샌프란시스코·토론토·시카고·라스베이거스·호놀룰루·시애틀·밴쿠버·시드니·멜버른·브리즈번. 장거리 출장의 공항 영접과 체류 동선을 안정적으로 처리합니다.</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="kr-sec alt">
+  <div class="inner">
+    <div class="comm-title">여러 도시를 한 번에 도는 출장이라면</div>
+    <p class="sec-lead">2개 이상 도시를 묶는 IR 로드쇼·다도시 출장은 도시별 견적을 따로 받을 필요가 없습니다. 전체 일정을 한 번에 보내주시면 통합 견적과 단일 정산으로 정리합니다.</p>
+    <div class="kr-cards col-3 as-flow">
+      <ul>
+        <li><p class="tit">일정 전달</p><p class="desc">방문 도시·날짜·인원·차량 등급을 한 번에 전달. 도시별로 나눠 문의할 필요가 없습니다.</p></li>
+        <li><p class="tit">통합 견적</p><p class="desc">전 도시 운영을 묶은 단일 견적을 한국어로 안내. 원화 표기와 세금계산서 기준을 함께 제시합니다.</p></li>
+        <li><p class="tit">단일 정산</p><p class="desc">출장 종료 후 모든 도시 비용을 한국 법인 세금계산서 한 건으로 정산. 법인카드·계좌이체 모두 가능합니다.</p></li>
+      </ul>
+    </div>
+    <div class="btns">
+      <a href="/kr/contact" class="comm-button"><span>다도시 견적 문의</span><i class="img-mask"></i></a>
+      <a href="/kr/corporate/roadshow" class="comm-button"><span>IR·로드쇼 운영</span><i class="img-mask"></i></a>
+    </div>
+  </div>
+</section>
+
+<section class="kr-cta">
+  <div class="bg"><div class="img-ph is-dark is-cover">cities-cta.jpg</div></div>
+  <div class="inner">
+    <p class="title">어느 도시든, 현지 차량 수배를 한 곳에서 끝내세요.</p>
+    <div class="btns">
+      <a href="/kr/booking" class="comm-button"><span>출장 차량 예약</span><i class="img-mask"></i></a>
+      <a href="/kr/contact" class="comm-button"><span>상담·문의</span><i class="img-mask"></i></a>
+    </div>
+  </div>
+</section>

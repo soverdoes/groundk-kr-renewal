@@ -1,0 +1,112 @@
+/* ===== GroundK /kr ver.2 — de-card layout system =====
+   Loaded AFTER kr-sub.css. Transforms the uniform bordered .kr-cards grid
+   into varied, scannable layouts via modifier classes on the .kr-cards wrapper.
+   Markup is unchanged: .kr-cards.<mod> > ul > li > (.tag .tit .desc).
+   Desktop base 1920 (1vw=19.2px) · mobile @media (max-aspect-ratio:10/9). */
+
+/* --- shared reset: neutralize the box for text layouts --- */
+.kr-cards.as-steps > ul,
+.kr-cards.as-list > ul,
+.kr-cards.as-stripes > ul { display:block; gap:0; grid-template-columns:none; }
+.kr-cards.as-steps > ul > li,
+.kr-cards.as-list > ul > li,
+.kr-cards.as-stripes > ul > li { border:0; }
+.kr-cards.as-steps .image,
+.kr-cards.as-list .image,
+.kr-cards.as-stripes .image,
+.kr-cards.as-flow .image { display:none; }
+
+/* 1) STEPS — numbered vertical list with divider rules (sequence / process) */
+.kr-cards.as-steps > ul { counter-reset:step; border-top:1px solid var(--color-border); }
+.kr-cards.as-steps > ul > li { position:relative; border-bottom:1px solid var(--color-border);
+  padding:2.4vw 0 2.4vw 6.5vw; row-gap:.5vw; }
+.kr-cards.as-steps > ul > li::before { counter-increment:step;
+  content:counter(step,decimal-leading-zero); position:absolute; left:0; top:2.3vw;
+  font-size:2.4vw; font-weight:800; line-height:1; color:var(--color-primary); letter-spacing:-.02em; }
+.kr-cards.as-steps .tit { font-size:1.563vw; }
+
+/* 2) FLOW — horizontal numbered steps, borderless, top accent bar (3-up sequences) */
+.kr-cards.as-flow > ul { counter-reset:flow; gap:2.083vw; }
+.kr-cards.as-flow > ul > li { counter-increment:flow; border:0; padding:3.2vw 0 0; position:relative; row-gap:.55vw; }
+.kr-cards.as-flow > ul > li::before { content:""; position:absolute; left:0; top:0; width:100%; height:3px;
+  background:linear-gradient(90deg,var(--color-primary) 0 38%,var(--color-border) 38%); }
+.kr-cards.as-flow > ul > li::after { content:counter(flow,decimal-leading-zero); position:absolute; left:0; top:1.1vw;
+  font-size:1.25vw; font-weight:800; color:var(--color-primary); letter-spacing:-.02em; }
+.kr-cards.as-flow .tit { font-size:1.563vw; }
+
+/* 3) STRIPES — full-width bands, left accent, light tint (benefits / scenarios / roles) */
+.kr-cards.as-stripes > ul > li { padding:2.3vw 2.6vw; border-left:4px solid var(--color-primary);
+  background:#F5F6FB; margin-bottom:1.25vw; row-gap:.55vw; }
+.kr-cards.as-stripes > ul > li:last-child { margin-bottom:0; }
+.kr-cards.as-stripes .tag { color:var(--color-primary); }
+.kr-cards.as-stripes .tit { font-size:1.667vw; }
+
+/* 4) LIST — divided rows, tag as outlined chip (reference / spec rows) */
+.kr-cards.as-list > ul { border-top:1px solid var(--color-border); }
+.kr-cards.as-list > ul > li { border-bottom:1px solid var(--color-border); padding:1.9vw 0; row-gap:.45vw; }
+.kr-cards.as-list .tag { display:inline-block; align-self:flex-start; padding:.22vw .72vw;
+  border:1px solid var(--color-primary); border-radius:1vw; color:var(--color-primary);
+  font-size:.78vw; margin-bottom:.35vw; }
+.kr-cards.as-list .tit { font-size:1.354vw; }
+
+/* comparison table (vehicle grades, etc.) */
+.kr-table { width:100%; overflow-x:auto; }
+.kr-table table { width:100%; border-collapse:collapse; }
+.kr-table th, .kr-table td { text-align:left; vertical-align:top; padding:1.4vw 1.4vw;
+  border-bottom:1px solid var(--color-border); font-size:1.042vw; line-height:1.5; color:var(--color-text-sub); }
+.kr-table thead th { font-size:1.146vw; font-weight:700; color:var(--color-primary);
+  border-bottom:2px solid var(--color-primary); white-space:nowrap; }
+.kr-table tbody th { font-size:1.25vw; font-weight:700; color:var(--color-text); white-space:nowrap; }
+.kr-table tbody tr:hover td, .kr-table tbody tr:hover th { background:#F5F6FB; }
+
+/* --- mobile --- */
+@media (max-aspect-ratio:10/9){
+  .kr-cards.as-steps > ul > li { padding:6vw 0 6vw 14vw; }
+  .kr-cards.as-steps > ul > li::before { font-size:7vw; top:5.6vw; }
+  .kr-cards.as-steps .tit { font-size:5vw; }
+
+  .kr-cards.as-flow > ul { gap:7vw; }
+  .kr-cards.as-flow > ul > li { padding:8vw 0 0; }
+  .kr-cards.as-flow > ul > li::after { font-size:4.6vw; top:3.2vw; }
+  .kr-cards.as-flow .tit { font-size:5vw; }
+
+  .kr-cards.as-stripes > ul > li { padding:6vw 6vw; margin-bottom:4vw; border-left-width:3px; }
+  .kr-cards.as-stripes .tit { font-size:5.4vw; }
+
+  .kr-cards.as-list > ul > li { padding:5vw 0; }
+  .kr-cards.as-list .tag { font-size:3vw; padding:1vw 2.4vw; border-radius:4vw; }
+  .kr-cards.as-list .tit { font-size:4.6vw; }
+
+  .kr-table th, .kr-table td { font-size:3.6vw; padding:3.4vw 3vw; }
+  .kr-table thead th { font-size:3.8vw; }
+  .kr-table tbody th { font-size:4.2vw; }
+}
+
+/* ===== richer comparison + spec band (de-sparse) ===== */
+/* multi-row comparison with one highlighted column */
+.kr-table.compare th, .kr-table.compare td { text-align:center; }
+.kr-table.compare thead th { font-weight:700; }
+.kr-table.compare thead th.hl { background:var(--color-primary); color:#fff; border-bottom-color:var(--color-primary);
+  border-radius:.4vw .4vw 0 0; }
+.kr-table.compare tbody th { text-align:left; background:#FAFAFC; color:var(--color-text); font-weight:700;
+  font-size:1.042vw; white-space:nowrap; }
+.kr-table.compare td.hl { background:#EEF0FB; color:var(--color-text); font-weight:600;
+  box-shadow:inset 3px 0 0 var(--color-primary), inset -3px 0 0 var(--color-primary); }
+.kr-table.compare tbody tr:last-child td.hl { box-shadow:inset 3px 0 0 var(--color-primary),
+  inset -3px 0 0 var(--color-primary), inset 0 -3px 0 var(--color-primary); }
+.kr-table.compare tbody tr:hover th, .kr-table.compare tbody tr:hover td:not(.hl) { background:#F5F6FB; }
+
+/* spec band: bordered tiles, accent top, tinted — replaces sparse icon rows */
+.kr-spec { display:grid; grid-template-columns:repeat(2,1fr); gap:1.25vw; }
+.kr-spec > div { border:1px solid var(--color-border); border-top:3px solid var(--color-primary);
+  background:#FAFAFC; padding:1.8vw 2vw; display:flex; flex-direction:column; row-gap:.55vw; }
+.kr-spec .k { font-size:1.042vw; font-weight:700; color:var(--color-primary); letter-spacing:-.01em; }
+.kr-spec .v { font-size:1.302vw; font-weight:600; color:var(--color-text); line-height:1.45; }
+
+@media (max-aspect-ratio:10/9){
+  .kr-table.compare tbody th { font-size:3.6vw; }
+  .kr-spec { grid-template-columns:1fr; gap:4vw; }
+  .kr-spec > div { padding:5.5vw 6vw; }
+  .kr-spec .k { font-size:3.6vw; }
+  .kr-spec .v { font-size:4.6vw; }
+}

@@ -1,0 +1,120 @@
+TITLE: 상담·문의 — 기업 도입·행사 RFP·일반 상담 — 그라운드케이 GroundK
+DESC: 해외 출장·행사 현지 차량 수배 상담·문의. 기업 도입, 행사 RFP, 일반 상담을 한국어로 응대. 전화 +82-2-863-3540, 이메일 ops@groundk.com.
+BODYCLASS: contact
+---MAIN---
+<section class="kr-hero">
+  <div class="bg"><div class="img-ph is-dark is-cover">contact-hero.jpg</div></div>
+  <div class="inner">
+    <p class="eyebrow">Contact</p>
+    <h1 class="hero-title">무엇을 도와드릴까요?</h1>
+    <p class="hero-lead">해외 출장·행사의 현지 차량 수배를 한국어로 상담합니다. 문의 성격을 고르시면, 담당 운영팀이 정해진 응대 시간 안에 회신합니다.</p>
+    <div class="btns">
+      <a href="/kr/booking" class="comm-button"><span>바로 예약</span><i class="img-mask"></i></a>
+      <a href="#contact-form" class="comm-button"><span>문의 폼으로</span><i class="img-mask"></i></a>
+    </div>
+  </div>
+</section>
+
+<section class="kr-sec">
+  <div class="inner">
+    <div class="comm-title">어떤 문의인지 먼저 골라 주세요</div>
+    <p class="sec-lead">문의 유형에 따라 담당 창구와 응대 속도가 다릅니다. 아래 세 가지 중 가까운 것을 선택하시면 안내가 바뀝니다.</p>
+    <div class="kr-tabs">
+      <button type="button" class="active" data-tab="enterprise">기업 도입</button>
+      <button type="button" data-tab="rfp">행사 RFP</button>
+      <button type="button" data-tab="general">일반 상담</button>
+    </div>
+    <div class="kr-cards col-3 as-stripes">
+      <ul>
+        <li>
+          <p class="tag">기업 도입 · 응대 1~2 영업일</p>
+          <p class="tit">출장이 반복되는 회사</p>
+          <p class="desc">임원 비서실, 출장팀, 글로벌 본사의 한국 법인을 위한 운영 계정 도입 상담입니다. 통합 예약·정산, 지정 담당자, 세금계산서·원화·법인카드 정산을 함께 설계합니다. 엔터프라이즈 안내 — <a href="/kr/enterprise">엔터프라이즈</a>.</p>
+        </li>
+        <li>
+          <p class="tag">행사 RFP · 응대 2~3 영업일</p>
+          <p class="tit">행사·컨퍼런스 운영팀</p>
+          <p class="desc">MICE·PCO, 럭셔리·문화 브랜드의 다인원 이동·셔틀·VIP 의전 제안 요청입니다. 일정표·참가 규모·도시를 알려 주시면 운영 구성과 견적을 정리해 회신합니다. 행사 운영 — <a href="/kr/event/operations">행사 운영</a>.</p>
+        </li>
+        <li>
+          <p class="tag">일반 상담 · 응대 1~2 영업일</p>
+          <p class="tit">단발 출장·개별 문의</p>
+          <p class="desc">한 번의 출장 차량, 견적 확인, 서비스·도시 문의 등 일반 상담입니다. 출장 성격을 알려 주시면 맞는 차량 구성을 한국어로 제안합니다. 차량 서비스 — <a href="/kr/services">서비스 안내</a>.</p>
+        </li>
+      </ul>
+    </div>
+    <p class="sec-close">어느 유형인지 애매하다면 일반 상담으로 보내 주셔도 됩니다. 내용을 보고 담당 창구로 연결합니다.</p>
+  </div>
+</section>
+
+<section class="kr-sec alt">
+  <div class="inner">
+    <div class="comm-title">연락처와 응대 시간</div>
+    <p class="sec-lead">전화·이메일로 바로 연락하셔도 되고, 아래 문의 폼을 이용하셔도 됩니다. 출장 중 긴급 상황은 24/7 한국어 운영 라인이 받습니다.</p>
+    <div class="kr-spec">
+      <div><span class="k">전화</span><span class="v">+82-2-863-3540</span></div>
+      <div><span class="k">이메일</span><span class="v">ops@groundk.com</span></div>
+      <div><span class="k">운영 시간</span><span class="v">평일 09:00~18:00 (KST) · 한국어 상담</span></div>
+      <div><span class="k">긴급 (출장 중)</span><span class="v">24/7 한국어 운영 라인 · 배차·일정 변경 즉시 대응</span></div>
+    </div>
+    <p class="sec-close">한국 법인 직접 응대. 현지 업체를 따로 상대할 필요 없이, 한국어 담당자 한 명이 끝까지 연결합니다.</p>
+  </div>
+</section>
+
+<section class="kr-sec" id="contact-form">
+  <div class="inner">
+    <div class="comm-title">문의 폼</div>
+    <p class="sec-lead">아래 항목을 채워 보내 주시면, 선택하신 문의 유형의 응대 시간 안에 회신합니다. 출장·행사 일정과 도시를 함께 적어 주시면 더 빠르게 안내할 수 있습니다.</p>
+    <div class="kr-form">
+      <form action="/kr/contact" method="post">
+        <div class="field">
+          <label for="cf-name">이름</label>
+          <input type="text" id="cf-name" name="name" placeholder="홍길동" required>
+        </div>
+        <div class="field">
+          <label for="cf-company">회사·기관</label>
+          <input type="text" id="cf-company" name="company" placeholder="회사명 / 부서" required>
+        </div>
+        <div class="field">
+          <label for="cf-phone">연락처</label>
+          <input type="tel" id="cf-phone" name="phone" placeholder="010-0000-0000" required>
+        </div>
+        <div class="field">
+          <label for="cf-email">이메일</label>
+          <input type="email" id="cf-email" name="email" placeholder="name@company.com" required>
+        </div>
+        <div class="field">
+          <label for="cf-type">문의 유형</label>
+          <select id="cf-type" name="type" required>
+            <option value="enterprise">기업 도입 (운영 계정·통합 정산)</option>
+            <option value="rfp">행사 RFP (제안·견적 요청)</option>
+            <option value="general">일반 상담 (단발 출장·개별 문의)</option>
+          </select>
+        </div>
+        <div class="field full">
+          <label for="cf-message">문의 내용</label>
+          <textarea id="cf-message" name="message" rows="6" placeholder="출장·행사 일정, 도시, 인원, 필요한 차량 구성을 적어 주세요." required></textarea>
+        </div>
+        <div class="field full agree">
+          <label><input type="checkbox" name="agree" value="yes" required> 개인정보 수집·이용에 동의합니다. (상담 회신 목적으로만 사용)</label>
+        </div>
+        <div class="field full submit">
+          <button type="submit" class="comm-button"><span>문의 보내기</span><i class="img-mask"></i></button>
+        </div>
+      </form>
+      <div class="form-placeholder">실제 발송은 운영 시스템 연동 후 처리됩니다. 폼이 동작하지 않으면 ops@groundk.com 으로 보내 주세요.</div>
+    </div>
+  </div>
+</section>
+
+<section class="kr-cta">
+  <div class="bg"><div class="img-ph is-dark is-cover">contact-cta.jpg</div></div>
+  <div class="inner">
+    <p class="title">현지 차량 수배, 한 곳에서 끝내세요.</p>
+    <div class="btns">
+      <a href="/kr/booking" class="comm-button"><span>예약</span><i class="img-mask"></i></a>
+      <a href="/kr/enterprise" class="comm-button"><span>엔터프라이즈 안내</span><i class="img-mask"></i></a>
+    </div>
+    <p class="contact">전화 +82-2-863-3540 · 이메일 ops@groundk.com · 긴급 24/7 한국어 운영</p>
+  </div>
+</section>

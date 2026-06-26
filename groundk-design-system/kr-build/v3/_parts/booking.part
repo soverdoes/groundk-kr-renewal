@@ -1,0 +1,82 @@
+TITLE: 예약하기 — 그라운드케이 GroundK
+DESC: 해외 출장·행사 현지 차량 예약. 일정·도시만 입력하면 견적 확인 후 예약 확정. 한국어 24/7 운영, 한국 법인 정산.
+BODYCLASS: booking
+---MAIN---
+<section class="kr-hero">
+  <div class="bg"><div class="img-ph is-dark is-cover">booking-hero.jpg</div></div>
+  <div class="inner">
+    <p class="tag">예약하기 / Booking</p>
+    <div class="comm-title">지금 예약하세요.</div>
+    <p class="sec-lead">일정과 도시만 알려주시면 됩니다. 현지 차량 수배·기사 배정·일정 변경 대응까지 한국어 운영팀이 한 곳에서 처리합니다.</p>
+  </div>
+</section>
+
+<section class="kr-sec">
+  <div class="inner">
+    <div class="comm-title">예약 위젯</div>
+    <p class="sec-lead">출장 도시와 날짜, 인원과 차종을 입력하면 견적이 안내됩니다. 복잡한 일정은 입력 없이 바로 상담으로 연결됩니다.</p>
+    <div class="img-ph">booking-widget.jpg</div>
+    <div class="kr-cards col-3 as-flow">
+      <ul>
+        <li>
+          <p class="tit">일정·도시 입력</p>
+          <p class="desc">방문 도시, 이용 날짜와 시간, 인원과 차종을 입력합니다. 여러 도시를 도는 일정도 한 번에 적을 수 있습니다.</p>
+        </li>
+        <li>
+          <p class="tit">견적 확인</p>
+          <p class="desc">입력한 일정에 맞춘 차량·요금 견적이 안내됩니다. 이동·대기·연료·통행료를 포함한 올인클루시브 기준으로 확인합니다.</p>
+        </li>
+        <li>
+          <p class="tit">예약 확정</p>
+          <p class="desc">견적에 동의하면 예약이 확정되고 기사·차량이 배정됩니다. 확정 내역과 현지 운영 연락처가 함께 전달됩니다.</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="kr-sec alt">
+  <div class="inner">
+    <div class="comm-title">예약이 처음이라면</div>
+    <p class="sec-lead">처음 이용하는 출장 담당자가 자주 확인하는 사항을 모았습니다.</p>
+    <div class="kr-cards col-2 as-list">
+      <ul>
+        <li>
+          <p class="tit">어디까지 예약할 수 있나요</p>
+          <p class="desc">검증된 50개 도시 의전 파트너 네트워크를 통해 주요 출장·행사 도시의 차량을 수배합니다. 도시가 목록에 없어도 상담으로 확인할 수 있습니다.</p>
+        </li>
+        <li>
+          <p class="tit">일정이 아직 확정되지 않았다면</p>
+          <p class="desc">대략적인 도시와 기간만으로도 가견적을 받을 수 있습니다. 일정이 바뀌어도 한국어 24/7 운영팀이 변경을 함께 조정합니다.</p>
+        </li>
+        <li>
+          <p class="tit">비용 처리는 어떻게 되나요</p>
+          <p class="desc">정산은 한국 법인을 통해 진행됩니다. 세금계산서 발행, 원화 결제, 법인카드 청구가 모두 가능해 출장 후 비용 처리가 깔끔합니다.</p>
+        </li>
+        <li>
+          <p class="tit">대규모·복합 일정이라면</p>
+          <p class="desc">다수 차량, 여러 도시, 행사 운영이 얽힌 일정은 위젯 대신 상담으로 진행하는 편이 정확합니다. 전담 운영팀이 처음부터 함께합니다.</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="kr-sec">
+  <div class="inner">
+    <div class="comm-title">바로 상담하기</div>
+    <p class="sec-lead">일정이 복잡하거나 직접 확인하고 싶은 사항이 있다면, 위젯을 거치지 않고 운영팀과 바로 상담할 수 있습니다.</p>
+    <p class="sec-close">임원 의전, 행사 차량 운영, 다도시 출장 등 맞춤 일정은 상담에서 더 빠르게 정리됩니다. 9년 운영 경험을 가진 한국어 운영팀이 처음 문의부터 출장 종료까지 책임집니다.</p>
+  </div>
+</section>
+
+<section class="kr-cta">
+  <div class="bg"><div class="img-ph is-dark is-cover">booking-cta.jpg</div></div>
+  <div class="inner">
+    <p class="title">일정과 도시만 알려주시면, 나머지는 운영팀이 맡습니다.</p>
+    <div class="btns">
+      <a href="/kr/booking" class="comm-button"><span>예약하기</span><i class="img-mask"></i></a>
+      <a href="/kr/contact" class="comm-button"><span>상담·문의</span><i class="img-mask"></i></a>
+    </div>
+  </div>
+</section>
