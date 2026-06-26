@@ -81,3 +81,32 @@
   .kr-table thead th { font-size:3.8vw; }
   .kr-table tbody th { font-size:4.2vw; }
 }
+
+/* ===== richer comparison + spec band (de-sparse) ===== */
+/* multi-row comparison with one highlighted column */
+.kr-table.compare th, .kr-table.compare td { text-align:center; }
+.kr-table.compare thead th { font-weight:700; }
+.kr-table.compare thead th.hl { background:var(--color-primary); color:#fff; border-bottom-color:var(--color-primary);
+  border-radius:.4vw .4vw 0 0; }
+.kr-table.compare tbody th { text-align:left; background:#FAFAFC; color:var(--color-text); font-weight:700;
+  font-size:1.042vw; white-space:nowrap; }
+.kr-table.compare td.hl { background:#EEF0FB; color:var(--color-text); font-weight:600;
+  box-shadow:inset 3px 0 0 var(--color-primary), inset -3px 0 0 var(--color-primary); }
+.kr-table.compare tbody tr:last-child td.hl { box-shadow:inset 3px 0 0 var(--color-primary),
+  inset -3px 0 0 var(--color-primary), inset 0 -3px 0 var(--color-primary); }
+.kr-table.compare tbody tr:hover th, .kr-table.compare tbody tr:hover td:not(.hl) { background:#F5F6FB; }
+
+/* spec band: bordered tiles, accent top, tinted — replaces sparse icon rows */
+.kr-spec { display:grid; grid-template-columns:repeat(2,1fr); gap:1.25vw; }
+.kr-spec > div { border:1px solid var(--color-border); border-top:3px solid var(--color-primary);
+  background:#FAFAFC; padding:1.8vw 2vw; display:flex; flex-direction:column; row-gap:.55vw; }
+.kr-spec .k { font-size:1.042vw; font-weight:700; color:var(--color-primary); letter-spacing:-.01em; }
+.kr-spec .v { font-size:1.302vw; font-weight:600; color:var(--color-text); line-height:1.45; }
+
+@media (max-aspect-ratio:10/9){
+  .kr-table.compare tbody th { font-size:3.6vw; }
+  .kr-spec { grid-template-columns:1fr; gap:4vw; }
+  .kr-spec > div { padding:5.5vw 6vw; }
+  .kr-spec .k { font-size:3.6vw; }
+  .kr-spec .v { font-size:4.6vw; }
+}
