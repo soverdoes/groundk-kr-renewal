@@ -117,21 +117,14 @@ BODYCLASS: enterprise
   <div class="inner">
     <div class="comm-title">일반 예약 vs 기업 계정</div>
     <p class="sec-lead">같은 차량, 같은 도시라도 운영 구조가 다릅니다. 건별 일반 예약과 기업 계정의 차이를 한눈에 비교했습니다.</p>
-    <div class="kr-table compare">
-      <table>
-        <thead>
-          <tr><th></th><th>일반 예약</th><th class="hl">기업 계정</th></tr>
-        </thead>
-        <tbody>
-          <tr><th>단가</th><td>출장마다 견적 요청</td><td class="hl">연간 단가 사전 합의</td></tr>
-          <tr><th>담당자</th><td>건별 배정</td><td class="hl">전담 운영 담당자 고정</td></tr>
-          <tr><th>정산</th><td>건별 세금계산서</td><td class="hl">한국 법인 통합 정산</td></tr>
-          <tr><th>리포트</th><td>제공 안 함</td><td class="hl">분기 운영 리포트</td></tr>
-          <tr><th>성수기 차량</th><td>선착순 확보</td><td class="hl">정기 거래 우선 확보</td></tr>
-          <tr><th>적합한 경우</th><td>연 1~2회 단발 출장</td><td class="hl">매년 반복되는 출장·행사</td></tr>
-        </tbody>
-      </table>
-    </div>
+    <div class="kr-rows">
+        <div class="kr-row"><p class="rt">단가</p><div class="rf"><span class="rf-i"><b>일반 예약</b>출장마다 견적 요청</span><span class="rf-i hl"><b>기업 계정</b>연간 단가 사전 합의</span></div></div>
+        <div class="kr-row"><p class="rt">담당자</p><div class="rf"><span class="rf-i"><b>일반 예약</b>건별 배정</span><span class="rf-i hl"><b>기업 계정</b>전담 운영 담당자 고정</span></div></div>
+        <div class="kr-row"><p class="rt">정산</p><div class="rf"><span class="rf-i"><b>일반 예약</b>건별 세금계산서</span><span class="rf-i hl"><b>기업 계정</b>한국 법인 통합 정산</span></div></div>
+        <div class="kr-row"><p class="rt">리포트</p><div class="rf"><span class="rf-i"><b>일반 예약</b>제공 안 함</span><span class="rf-i hl"><b>기업 계정</b>분기 운영 리포트</span></div></div>
+        <div class="kr-row"><p class="rt">성수기 차량</p><div class="rf"><span class="rf-i"><b>일반 예약</b>선착순 확보</span><span class="rf-i hl"><b>기업 계정</b>정기 거래 우선 확보</span></div></div>
+        <div class="kr-row"><p class="rt">적합한 경우</p><div class="rf"><span class="rf-i"><b>일반 예약</b>연 1~2회 단발 출장</span><span class="rf-i hl"><b>기업 계정</b>매년 반복되는 출장·행사</span></div></div>
+      </div>
     <p class="sec-close">단발 출장이라면 일반 예약이 충분합니다. 같은 일정이 매년 돌아온다면, 기업 계정이 실무를 줄입니다.</p>
   </div>
 </section>

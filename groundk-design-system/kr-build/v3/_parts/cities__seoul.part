@@ -114,19 +114,12 @@ BODYCLASS: cities-seoul
   <div class="inner">
     <div class="comm-title">차종별 가격대</div>
     <p class="sec-lead">서울 기준 차량 등급과 권장 용도입니다. 금액은 동선·이용 시간·인원에 따라 달라지므로 견적은 문의로 안내합니다. 모든 청구는 원화·세금계산서 기준입니다.</p>
-    <div class="kr-table">
-      <table>
-        <thead>
-          <tr><th>차량 등급</th><th>권장 용도</th><th>탑승 인원</th><th>가격대</th></tr>
-        </thead>
-        <tbody>
-          <tr><th>비즈니스 세단</th><td>임원 수행 · 공항 픽업</td><td>1~3인</td><td>문의</td></tr>
-          <tr><th>프리미엄 세단</th><td>VIP 의전 · IR 미팅</td><td>1~3인</td><td>문의</td></tr>
-          <tr><th>밴 / SUV</th><td>소규모 단체 · 수하물 동반</td><td>4~7인</td><td>문의</td></tr>
-          <tr><th>미니버스</th><td>행사·전시 단체 수송</td><td>8~25인</td><td>문의</td></tr>
-        </tbody>
-      </table>
-    </div>
+    <div class="kr-rows">
+        <div class="kr-row"><p class="rt">비즈니스 세단</p><div class="rf"><span class="rf-i"><b>권장 용도</b>임원 수행 · 공항 픽업</span><span class="rf-i"><b>탑승 인원</b>1~3인</span><span class="rf-i"><b>가격대</b>문의</span></div></div>
+        <div class="kr-row"><p class="rt">프리미엄 세단</p><div class="rf"><span class="rf-i"><b>권장 용도</b>VIP 의전 · IR 미팅</span><span class="rf-i"><b>탑승 인원</b>1~3인</span><span class="rf-i"><b>가격대</b>문의</span></div></div>
+        <div class="kr-row"><p class="rt">밴 / SUV</p><div class="rf"><span class="rf-i"><b>권장 용도</b>소규모 단체 · 수하물 동반</span><span class="rf-i"><b>탑승 인원</b>4~7인</span><span class="rf-i"><b>가격대</b>문의</span></div></div>
+        <div class="kr-row"><p class="rt">미니버스</p><div class="rf"><span class="rf-i"><b>권장 용도</b>행사·전시 단체 수송</span><span class="rf-i"><b>탑승 인원</b>8~25인</span><span class="rf-i"><b>가격대</b>문의</span></div></div>
+      </div>
     <p class="sec-close">원화 표기 견적과 세금계산서 기준을 함께 안내합니다. 차량 등급 상세는 <a href="/kr/services">서비스 안내</a>를 참고하세요.</p>
   </div>
 </section>

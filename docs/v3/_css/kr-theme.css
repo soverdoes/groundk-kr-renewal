@@ -1,0 +1,162 @@
+/* ============================================================
+   GroundK /kr ver.3 — "Editorial Premium" theme (loaded LAST)
+   Deep ink + warm ivory + gold accent. No boxed cards. No tables.
+   Overrides production style.css + kr-sub/v2/v3 via #wrap specificity.
+   Base 1920 (1vw=19.2px) · mobile @media (max-aspect-ratio:10/9).
+   ============================================================ */
+:root{
+  --ink:#15161d; --ink2:#1e1f29; --paper:#f7f4ed; --sand:#efe9db;
+  --gold:#a9814a; --gold2:#c7a15c; --line:#e2dbca; --line2:#d8d0bd;
+  --tx:#1c1d24; --txsub:#6c6b73; --ondk:#f7f4ed; --ondksub:#b8b2a4;
+}
+
+/* ---- base canvas ---- */
+#wrap{ background:var(--paper); color:var(--tx); }
+#wrap .main-wrap{ background:var(--paper); }
+#wrap .kr-sec{ background:var(--paper); padding:6.25vw 0; }
+#wrap .kr-sec.alt{ background:var(--sand); }
+#wrap .kr-sec .inner{ max-width:none; }
+
+/* ---- section heading: gold kicker + large editorial title ---- */
+#wrap .comm-title{ position:relative; font-size:2.6vw; font-weight:800; letter-spacing:-.02em;
+  line-height:1.22; color:var(--tx); padding-top:1.8vw; margin-bottom:1.6vw; }
+#wrap .comm-title::before{ content:""; position:absolute; top:0; left:0; width:3.2vw; height:2px; background:var(--gold); }
+#wrap .sec-lead{ font-size:1.25vw; line-height:1.7; color:var(--txsub); max-width:52vw; margin-bottom:2.4vw; }
+#wrap .sec-close{ font-size:1.09vw; line-height:1.7; color:var(--txsub); margin-top:2vw;
+  padding-top:1.4vw; border-top:1px solid var(--line); }
+#wrap .sec-close a, #wrap .sec-lead a, #wrap .desc a{ color:var(--gold); font-weight:600; text-decoration:none; border-bottom:1px solid var(--gold2); }
+
+/* ---- HERO ---- */
+#wrap .kr-hero{ background:var(--ink); }
+#wrap .kr-hero .title{ font-size:4vw; font-weight:800; letter-spacing:-.025em; line-height:1.2; color:var(--ondk); }
+#wrap .kr-hero .lead{ font-size:1.35vw; line-height:1.65; color:var(--ondksub); margin-top:1.4vw; max-width:46vw; }
+#wrap .kr-hero .bg .img-ph.is-dark{ filter:none; }
+
+/* ---- BUTTONS: gold ---- */
+#wrap .comm-button, #wrap .btn-booking{ background:var(--gold); border-color:var(--gold); color:#fff; }
+#wrap .comm-button span, #wrap .btn-booking{ color:#fff; }
+#wrap .comm-button:hover, #wrap .btn-booking:hover{ background:var(--gold2); border-color:var(--gold2); }
+#wrap .comm-button.on-dark{ background:transparent; border:1px solid var(--gold2); }
+#wrap .comm-button.on-dark span{ color:var(--gold2); }
+#wrap .btn-consult{ border-color:var(--gold2); color:var(--gold2); }
+#wrap .btn-consult:hover{ background:var(--gold2); color:var(--ink); }
+
+/* ---- HEADER: gold accents on dark pill ---- */
+#wrap .header-wrap .gnb nav > ul > li > a:hover{ color:var(--gold2); }
+
+/* ============================================================
+   DE-CARD: turn boxed .kr-cards into editorial divided grids
+   ============================================================ */
+#wrap .kr-cards > ul{ gap:0; }
+#wrap .kr-cards > ul > li{ border:0; background:transparent; padding:2.2vw 2.2vw 2.2vw 0;
+  border-top:1px solid var(--line); }
+#wrap .kr-cards.col-2 > ul{ column-gap:4vw; }
+#wrap .kr-cards.col-3 > ul{ column-gap:3vw; }
+#wrap .kr-cards > ul > li .image{ margin:0 0 1.2vw; }
+#wrap .kr-cards .tag{ color:var(--gold); font-size:.86vw; font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
+#wrap .kr-cards .tit{ color:var(--tx); font-size:1.5vw; font-weight:700; letter-spacing:-.01em; margin:.5vw 0 .55vw; }
+#wrap .kr-cards .desc{ color:var(--txsub); font-size:1.02vw; line-height:1.62; }
+
+/* as-steps: gold hanging numerals, hairline rows (no box) */
+#wrap .kr-cards.as-steps > ul{ border-top:0; }
+#wrap .kr-cards.as-steps > ul > li{ border-top:1px solid var(--line); padding:2.4vw 0 2.4vw 6vw; }
+#wrap .kr-cards.as-steps > ul > li::before{ color:var(--gold); font-weight:800; }
+
+/* as-flow: gold top rule + numeral */
+#wrap .kr-cards.as-flow > ul > li{ border-top:0; padding:3vw 2vw 0 0; }
+#wrap .kr-cards.as-flow > ul > li::before{ background:var(--gold); height:2px; }
+#wrap .kr-cards.as-flow > ul > li::after{ color:var(--gold); }
+
+/* as-stripes: strip the tinted box -> gold left rule editorial band */
+#wrap .kr-cards.as-stripes > ul > li{ background:transparent; border-top:0; border-left:2px solid var(--gold);
+  padding:.4vw 0 1.8vw 2vw; margin-bottom:2.2vw; }
+#wrap .kr-cards.as-stripes .tit{ font-size:1.6vw; }
+
+/* as-list: clean hairline rows, gold text label (no chip box) */
+#wrap .kr-cards.as-list > ul{ border-top:1px solid var(--line); }
+#wrap .kr-cards.as-list > ul > li{ border-top:0; border-bottom:1px solid var(--line); padding:2vw 0; }
+#wrap .kr-cards.as-list .tag{ border:0; padding:0; border-radius:0; color:var(--gold); }
+
+/* ---- kr-mediarow (image + text, editorial) ---- */
+#wrap .kr-mediarow{ gap:3.6vw; margin-bottom:4vw; }
+#wrap .kr-mediarow .m-text .tag{ color:var(--gold); letter-spacing:.12em; text-transform:uppercase; font-size:.86vw; }
+#wrap .kr-mediarow .m-text .tit{ font-size:2vw; font-weight:800; letter-spacing:-.02em; color:var(--tx); }
+#wrap .kr-mediarow .m-text .desc{ font-size:1.1vw; line-height:1.72; color:var(--txsub); }
+#wrap .kr-mediarow .m-img .img-ph{ aspect-ratio:4/3; }
+
+/* ---- kr-quickfacts: borderless editorial spec grid (NOT tiles) ---- */
+#wrap .kr-quickfacts{ gap:0; border-top:1px solid var(--line2); }
+#wrap .kr-quickfacts > div{ border:0; border-bottom:1px solid var(--line); border-radius:0;
+  padding:1.5vw 2vw 1.5vw 0; }
+#wrap .kr-quickfacts .k{ color:var(--gold); font-size:.86vw; letter-spacing:.1em; text-transform:uppercase; }
+#wrap .kr-quickfacts .v{ color:var(--tx); font-size:1.18vw; }
+
+/* ---- kr-spec: borderless, gold top rule ---- */
+#wrap .kr-spec{ gap:0 3vw; }
+#wrap .kr-spec > div{ border:0; border-top:2px solid var(--gold); background:transparent; border-radius:0;
+  padding:1.3vw 0 1.6vw; }
+#wrap .kr-spec .k{ color:var(--gold); }
+#wrap .kr-spec .v{ color:var(--tx); }
+
+/* ---- kr-stats: borderless huge gold numerals ---- */
+#wrap .kr-stats > div{ border-left:1px solid var(--line2); }
+#wrap .kr-stats > div:first-child{ border-left:0; }
+#wrap .kr-stats .num{ color:var(--gold); font-size:3.2vw; font-weight:800; }
+#wrap .kr-stats .lbl{ color:var(--txsub); }
+
+/* ---- kr-logowall: subtle editorial, no heavy boxes ---- */
+#wrap .kr-logowall{ gap:1px; background:var(--line); border:1px solid var(--line); }
+#wrap .kr-logowall > div{ border:0; border-radius:0; background:var(--paper); color:var(--txsub); font-size:.95vw; }
+
+/* ============================================================
+   kr-rows — replaces all <table> (no table styling anywhere)
+   ============================================================ */
+#wrap .kr-rows{ border-top:2px solid var(--gold); }
+#wrap .kr-rows .kr-row{ display:grid; grid-template-columns:14vw 1fr; gap:2vw; align-items:baseline;
+  padding:1.8vw 0; border-bottom:1px solid var(--line); }
+#wrap .kr-rows .rt{ font-size:1.35vw; font-weight:700; color:var(--tx); letter-spacing:-.01em; }
+#wrap .kr-rows .rf{ display:flex; flex-wrap:wrap; gap:.6vw 2.4vw; }
+#wrap .kr-rows .rf > span{ font-size:1.04vw; line-height:1.5; color:var(--txsub); }
+#wrap .kr-rows .rf b{ display:block; font-size:.8vw; font-weight:700; color:var(--gold);
+  letter-spacing:.06em; text-transform:uppercase; margin-bottom:.15vw; }
+#wrap .kr-rows .rf-i.hl{ color:var(--tx); font-weight:600; }
+#wrap .kr-rows .rf-i.hl b{ color:var(--gold); }
+
+/* ---- accordion: clean editorial ---- */
+#wrap .sct-accordion .list > ul > li{ border-bottom:1px solid var(--line); }
+#wrap .sct-accordion .acc-title p{ color:var(--tx); font-weight:600; }
+#wrap .sct-accordion .ico-plus{ color:var(--gold); }
+
+/* ---- CTA: ink band, gold ---- */
+#wrap .kr-cta{ background:var(--ink); }
+#wrap .kr-cta .title{ color:var(--ondk); font-size:2.6vw; font-weight:800; letter-spacing:-.02em; }
+
+/* ============================================================ MOBILE ============================================================ */
+@media (max-aspect-ratio:10/9){
+  #wrap .comm-title{ font-size:7vw; padding-top:5vw; margin-bottom:4.5vw; }
+  #wrap .comm-title::before{ width:10vw; }
+  #wrap .sec-lead{ font-size:4vw; max-width:none; }
+  #wrap .sec-close{ font-size:3.8vw; }
+  #wrap .kr-hero .title{ font-size:8.6vw; }
+  #wrap .kr-hero .lead{ font-size:4.2vw; max-width:none; }
+  #wrap .kr-sec{ padding:14vw 0; }
+
+  #wrap .kr-cards.col-2 > ul, #wrap .kr-cards.col-3 > ul{ grid-template-columns:1fr; }
+  #wrap .kr-cards > ul > li{ padding:6vw 0; }
+  #wrap .kr-cards .tit{ font-size:5.2vw; }
+  #wrap .kr-cards .desc{ font-size:3.9vw; }
+  #wrap .kr-cards .tag{ font-size:3vw; }
+  #wrap .kr-cards.as-stripes > ul > li{ padding:1vw 0 5vw 5vw; }
+  #wrap .kr-mediarow .m-text .tit{ font-size:6.4vw; }
+  #wrap .kr-mediarow .m-text .desc{ font-size:4vw; }
+  #wrap .kr-quickfacts .k{ font-size:3vw; }
+  #wrap .kr-quickfacts .v{ font-size:4.4vw; }
+  #wrap .kr-stats .num{ font-size:10vw; }
+
+  #wrap .kr-rows .kr-row{ grid-template-columns:1fr; gap:2vw; padding:5vw 0; }
+  #wrap .kr-rows .rt{ font-size:5vw; }
+  #wrap .kr-rows .rf{ gap:2.5vw 6vw; }
+  #wrap .kr-rows .rf > span{ font-size:3.9vw; }
+  #wrap .kr-rows .rf b{ font-size:3vw; }
+  #wrap .kr-cta .title{ font-size:7vw; }
+}

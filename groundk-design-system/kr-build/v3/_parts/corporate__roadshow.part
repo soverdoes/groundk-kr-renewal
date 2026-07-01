@@ -96,20 +96,13 @@ BODYCLASS: corporate-roadshow
       <div><div class="num">9</div><div class="lbl">년 운영 경험</div></div>
       <div><div class="num">1</div><div class="lbl">명의 통합 담당자</div></div>
     </div>
-    <div class="kr-table">
-      <table>
-        <thead>
-          <tr><th>도시</th><th>차량 운영</th><th>공항 연결</th><th>한국어 관제</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>도쿄</td><td>의전 차량·미팅 동선</td><td>하네다·나리타 패스트트랙</td><td>가능</td></tr>
-          <tr><td>싱가포르</td><td>의전 차량·미팅 동선</td><td>창이 영접·패스트트랙</td><td>가능</td></tr>
-          <tr><td>홍콩</td><td>의전 차량·미팅 동선</td><td>첵랍콕 영접</td><td>가능</td></tr>
-          <tr><td>런던</td><td>의전 차량·미팅 동선</td><td>히드로 영접·패스트트랙</td><td>가능</td></tr>
-          <tr><td>뉴욕</td><td>의전 차량·미팅 동선</td><td>JFK·뉴어크 영접</td><td>가능</td></tr>
-        </tbody>
-      </table>
-    </div>
+    <div class="kr-rows">
+        <div class="kr-row"><p class="rt">도쿄</p><div class="rf"><span class="rf-i"><b>차량 운영</b>의전 차량·미팅 동선</span><span class="rf-i"><b>공항 연결</b>하네다·나리타 패스트트랙</span><span class="rf-i"><b>한국어 관제</b>가능</span></div></div>
+        <div class="kr-row"><p class="rt">싱가포르</p><div class="rf"><span class="rf-i"><b>차량 운영</b>의전 차량·미팅 동선</span><span class="rf-i"><b>공항 연결</b>창이 영접·패스트트랙</span><span class="rf-i"><b>한국어 관제</b>가능</span></div></div>
+        <div class="kr-row"><p class="rt">홍콩</p><div class="rf"><span class="rf-i"><b>차량 운영</b>의전 차량·미팅 동선</span><span class="rf-i"><b>공항 연결</b>첵랍콕 영접</span><span class="rf-i"><b>한국어 관제</b>가능</span></div></div>
+        <div class="kr-row"><p class="rt">런던</p><div class="rf"><span class="rf-i"><b>차량 운영</b>의전 차량·미팅 동선</span><span class="rf-i"><b>공항 연결</b>히드로 영접·패스트트랙</span><span class="rf-i"><b>한국어 관제</b>가능</span></div></div>
+        <div class="kr-row"><p class="rt">뉴욕</p><div class="rf"><span class="rf-i"><b>차량 운영</b>의전 차량·미팅 동선</span><span class="rf-i"><b>공항 연결</b>JFK·뉴어크 영접</span><span class="rf-i"><b>한국어 관제</b>가능</span></div></div>
+      </div>
     <p class="sec-close">도시별 상세 운영 조건은 <a href="/kr/cities">도시 안내</a>에서 확인하실 수 있습니다.</p>
   </div>
 </section>

@@ -62,20 +62,13 @@ BODYCLASS: services-airport-concierge
         </li>
       </ul>
     </div>
-    <div class="kr-table">
-      <table>
-        <thead>
-          <tr><th>항목</th><th>Meet &amp; Greet</th><th>Fast Track</th><th>VIP Concierge</th></tr>
-        </thead>
-        <tbody>
-          <tr><th>입국심사 패스트트랙</th><td>선택</td><td>포함</td><td>포함</td></tr>
-          <tr><th>수하물 동선 안내</th><td>포함</td><td>포함</td><td>포함</td></tr>
-          <tr><th>라운지 안내</th><td>—</td><td>선택</td><td>포함</td></tr>
-          <tr><th>전담 인력 동행</th><td>—</td><td>선택</td><td>포함</td></tr>
-          <tr><th>차량 연결</th><td>포함</td><td>포함</td><td>포함</td></tr>
-        </tbody>
-      </table>
-    </div>
+    <div class="kr-rows">
+        <div class="kr-row"><p class="rt">입국심사 패스트트랙</p><div class="rf"><span class="rf-i"><b>Meet &amp; Greet</b>선택</span><span class="rf-i"><b>Fast Track</b>포함</span><span class="rf-i"><b>VIP Concierge</b>포함</span></div></div>
+        <div class="kr-row"><p class="rt">수하물 동선 안내</p><div class="rf"><span class="rf-i"><b>Meet &amp; Greet</b>포함</span><span class="rf-i"><b>Fast Track</b>포함</span><span class="rf-i"><b>VIP Concierge</b>포함</span></div></div>
+        <div class="kr-row"><p class="rt">라운지 안내</p><div class="rf"><span class="rf-i"><b>Meet &amp; Greet</b>—</span><span class="rf-i"><b>Fast Track</b>선택</span><span class="rf-i"><b>VIP Concierge</b>포함</span></div></div>
+        <div class="kr-row"><p class="rt">전담 인력 동행</p><div class="rf"><span class="rf-i"><b>Meet &amp; Greet</b>—</span><span class="rf-i"><b>Fast Track</b>선택</span><span class="rf-i"><b>VIP Concierge</b>포함</span></div></div>
+        <div class="kr-row"><p class="rt">차량 연결</p><div class="rf"><span class="rf-i"><b>Meet &amp; Greet</b>포함</span><span class="rf-i"><b>Fast Track</b>포함</span><span class="rf-i"><b>VIP Concierge</b>포함</span></div></div>
+      </div>
   </div>
 </section>
 
